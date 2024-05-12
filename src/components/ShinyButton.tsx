@@ -1,11 +1,24 @@
-import { motion } from "framer-motion";
+"use client"; // for nextjs
 
-const ShinyButton = () => {
+import { motion, type HTMLMotionProps } from "framer-motion";
+
+type ExtendedMotionProps = HTMLMotionProps<"button"> & {
+  initial?: Record<string, unknown>;
+  animate?: Record<string, unknown>;
+};
+
+type ShinyButtonProps = ExtendedMotionProps & {
+  children: React.ReactNode;
+};
+
+export default function ShinyButton({
+  children,
+  type = "button", // Default to "button" type
+  ...rest
+}: ShinyButtonProps) {
   return (
     <motion.button
-      // @ts-ignore
       initial={{ "--x": "100%", scale: 1 }}
-      // @ts-ignore
       animate={{ "--x": "-100%" }}
       whileTap={{ scale: 0.97 }}
       transition={{
@@ -23,14 +36,13 @@ const ShinyButton = () => {
           mass: 0.1,
         },
       }}
-      className="px-6 py-2 rounded-md relative radial-gradient"
+      className="radial-gradient relative rounded-md px-6 py-2"
+      {...rest}
     >
-      <span className="text-neutral-100 tracking-wide font-light h-full w-full block relative linear-mask">
-        Start now
+      <span className="text-neutral-900 font-light linear-mask relative block h-full w-full tracking-wide">
+        {children}
       </span>
-      <span className="block absolute inset-0 rounded-md p-px linear-overlay" />
+      <span className="linear-overlay absolute inset-0 block rounded-md p-px" />
     </motion.button>
   );
-};
-
-export default ShinyButton;
+}

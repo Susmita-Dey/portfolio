@@ -1,15 +1,13 @@
-// next.config.js
-
 module.exports = {
   async rewrites() {
     return [
       {
-        source: "/blog",
-        destination: "https://your-custom-domain.com/blog",
+         source: "/blog",
+         destination: "https://susmitawrites.vercel.app/blog",
       },
       {
-        source: "/blog/:path*",
-        destination: "https://your-custom-domain.com/blog/:path*",
+         source: "/blog/:path*",
+         destination: "https://susmitawrites.vercel.app/blog/:path*",
       },
     ];
   },

@@ -18,6 +18,11 @@ const config = {
       },
     },
     extend: {
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(#32A5D3)',
+        'gradient-conic':
+          'conic-gradient(from 180deg at 50% 50%, #32A5D3)',
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -59,6 +64,12 @@ const config = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
+        "infiniteSlider": {
+          "0%": { transform: "translateX(0)" },
+          "100%": {
+            transform: "translateX(calc(-250px * 5))",
+          },
+        },
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
@@ -71,6 +82,7 @@ const config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "infinite-slider": "infiniteSlider 20s linear infinite",
       },
     },
   },

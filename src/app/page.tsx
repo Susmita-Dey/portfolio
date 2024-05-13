@@ -1,4 +1,4 @@
-import ShinyButton from "@/components/ShinyButton";
+// import ShinyButton from "@/components/ShinyButton";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 

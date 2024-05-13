@@ -1,5 +1,7 @@
+import Link from "next/link";
 import { ModeToggle } from "./ModeToggle";
 import TransitionLink from "./TransitionLink";
+import { Button } from "./ui/button";
 
 const Navigation = () => {
   return (
@@ -16,6 +18,12 @@ const Navigation = () => {
         {/* <TransitionLink href="/products" label="Freebies" /> */}
         <TransitionLink href="/contact" label="Contact" />
         <ModeToggle />
+        <Link
+          href="https://docs.google.com/document/d/1dotmSNGjDiDVcK5gkoQY1PHGUHHEHqCPBppbVg6CF70/edit?usp=sharing"
+          replace
+        >
+          <Button>View Resume</Button>
+        </Link>
       </div>
     </nav>
   );

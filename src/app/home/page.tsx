@@ -3,7 +3,7 @@ import React from 'react'
 
 const HomePage = () => {
   return (
-    <section className="flex flex-col space-y-6 items-center">
+    <section className="mx-6 my-10 flex flex-col items-center">
         <HeroSection />
     </section>
   )

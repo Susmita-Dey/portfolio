@@ -1,35 +1,17 @@
 "use client";
-
 import Image from "next/image";
-import React, { useEffect } from "react";
+import React from "react";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import { Roboto_Slab } from "next/font/google";
 import { Separator } from "./ui/separator";
-import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import { ArrowDownIcon, RocketIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
+import CountUp from "react-countup";
 
 const robotoSlab = Roboto_Slab({ subsets: ["latin"] });
 
 const HeroSection = () => {
-  const counts = [5, 10, 30]; // Example values for each span
-  const motionValues = counts.map(() => useMotionValue(0));
-  const roundedValues = motionValues.map((value) =>
-    useTransform(value, Math.round)
-  );
-
-  useEffect(() => {
-    const delay = 200;
-    setTimeout(() => {
-      counts.forEach((targetValue, index) => {
-        animate(motionValues[index], targetValue, {
-          duration: 2,
-        });
-      });
-    }, delay);
-  }, []);
-
   return (
     <div className="border-2 rounded-md w-full">
       <div className="my-6 flex flex-row justify-between gap-6 px-12 py-4">
@@ -41,6 +23,7 @@ const HeroSection = () => {
             alt="profile-photo"
             width={500}
             height={500}
+            priority
           />
         </div>
         {/* my name and little about with CTA */}
@@ -55,25 +38,40 @@ const HeroSection = () => {
             <div className="flex h-5 items-center space-x-4 text-base">
               <div className="flex flex-col items-center space-y-2">
                 <span>Completed</span>
-                <motion.span className="text-xl">
-                  {roundedValues[0]}
-                </motion.span>
+                <span className="text-xl">
+                  <CountUp
+                    duration={0}
+                    className="counter"
+                    end={5}
+                    delay={0.5}
+                  />
+                </span>
                 <span>internships</span>
               </div>
               <Separator orientation="vertical" className="h-24" />
               <div className="flex flex-col items-center space-y-2">
                 <span>Served</span>
-                <motion.span className="text-xl">
-                  {roundedValues[1]}
-                </motion.span>
+                <span className="text-xl">
+                  <CountUp
+                    duration={0}
+                    className="counter"
+                    end={10}
+                    delay={0.5}
+                  />
+                </span>
                 <span>clients</span>
               </div>
               <Separator orientation="vertical" className="h-24" />
               <div className="flex flex-col items-center space-y-2">
                 <span>Mentored</span>
-                <motion.span className="text-xl">
-                  {roundedValues[2]}
-                </motion.span>
+                <span className="text-xl">
+                  <CountUp
+                    duration={0}
+                    className="counter"
+                    end={25}
+                    delay={0.5}
+                  />
+                </span>
                 <span>people</span>
               </div>
             </div>

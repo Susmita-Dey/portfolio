@@ -1,5 +1,7 @@
+import ExperienceSection from "@/components/ExperienceSection";
 import HeroSection from "@/components/HeroSection";
 import LogoSlider from "@/components/LogoSlider";
+import SkillsSection from "@/components/SkillsSection";
 
 const HomePage = () => {
   return (
@@ -8,6 +10,8 @@ const HomePage = () => {
       <section className="flex flex-col">
         <LogoSlider />
       </section>
+      <SkillsSection />
+      <ExperienceSection />
     </section>
   );
 };

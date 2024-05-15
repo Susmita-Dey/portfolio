@@ -3,13 +3,11 @@ import Image from "next/image";
 import React from "react";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
-import { Roboto_Slab } from "next/font/google";
 import { Separator } from "./ui/separator";
 import { ArrowDownIcon, RocketIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 import CountUp from "react-countup";
-
-const robotoSlab = Roboto_Slab({ subsets: ["latin"] });
+import { fonts } from "@/lib/data";
 
 const HeroSection = () => {
   return (
@@ -30,7 +28,7 @@ const HeroSection = () => {
         <div className="flex flex-col space-y-4">
           <Badge className="w-[9.5rem]">💼 Available for work</Badge>
           <h2 className="text-5xl font-bold">Hello, I&apos;m Susmita Dey.</h2>
-          <p className={`text-xl w-[42rem] ${robotoSlab.className}`}>
+          <p className={`text-xl w-[42rem] ${fonts.robotoSlab.className}`}>
             A software developer and designer passionate about building web
             apps, Open Source and communities; based in <strong>India!</strong>
           </p>

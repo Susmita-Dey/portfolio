@@ -31,7 +31,7 @@ const TestimonialSection = () => {
             <div className="flex flex-col px-2">
               <div className="py-4 border-b h-48">
                 <p className={`text-sm ${fonts.robotoSlab.className}`}>
-                  "{feedback.quote}"
+                  &quot;{feedback.quote}&quot;
                 </p>
               </div>
               <div
@@ -43,7 +43,7 @@ const TestimonialSection = () => {
                   <div className="mx-2 mt-1.5">
                     <img
                       src={feedback.clientImg}
-                      alt="client image"
+                      alt={feedback.client}
                       className="rounded-full border-2 w-12 h-12 object-fill"
                     />
                   </div>
@@ -51,7 +51,7 @@ const TestimonialSection = () => {
                   <div className="mx-2 mt-1.5">
                     <img
                       src={"/person.png"}
-                      alt="client image"
+                      alt={feedback.client}
                       className="rounded-full border-2 p-1 object-fill bg-slate-300 dark:bg-gray-900 w-12 h-12"
                     />
                   </div>
@@ -62,7 +62,7 @@ const TestimonialSection = () => {
                     {feedback.designation}
                   </p>
                 </div>
-                {feedback.social ? (
+                {feedback.social && (
                   <div className="mx-2 items-end mt-1.5">
                     {feedback.social.includes("linkedin") ? (
                       <Link
@@ -82,8 +82,6 @@ const TestimonialSection = () => {
                       </Link>
                     )}
                   </div>
-                ) : (
-                  ""
                 )}
               </div>
             </div>

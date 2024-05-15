@@ -85,9 +85,9 @@ export default function ExperienceSection() {
         ))}
       </VerticalTimeline>
       <p
-        className={`text-xl italic text-center font-bold my-10 ${fonts.robotoSlab.className}`}
+        className={`text-xl italic text-center font-medium my-10 ${fonts.robotoSlab.className}`}
       >
-        ...and many more volunteer/freelance experiences
+        .....and many more volunteer/freelance experiences
       </p>
     </section>
   );

@@ -12,15 +12,15 @@ import { MdEmail } from "react-icons/md";
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col items-center">
+    <footer className="flex flex-col items-center mt-auto">
       <div className="flex gap-1 -mb-6">
-        <Link href={"/"}>
+        <Link href={"mailto:susmitadeywork@gmail.com"}>
           <MdEmail className="text-lg cursor-pointer" />
         </Link>
-        <Link href={"/"}>
+        <Link href={"https://github.com/Susmita-Dey"}>
           <GitHubLogoIcon className="text-2xl cursor-pointer" />
         </Link>
-        <Link href={"/"}>
+        <Link href={"https://twitter.com/its_SusmitaDey"}>
           <TwitterLogoIcon className="text-2xl cursor-pointer" />
         </Link>
         <Link href={"/"}>

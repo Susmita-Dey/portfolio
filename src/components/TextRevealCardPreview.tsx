@@ -12,7 +12,6 @@ import MagicButton from "./MagicButton";
 import { IoCopyOutline } from "react-icons/io5";
 import animationData from "@/lib/confetti.json";
 import Lottie from "react-lottie";
-import { UnderlineLink } from "./Links";
 
 export function TextRevealCardPreview() {
   const [copied, setCopied] = useState(false);
@@ -70,36 +69,39 @@ export function TextRevealCardPreview() {
             <div className="flex-col gap-2">
               {socialMedia.slice(0, 3).map((item, index) => (
                 <div className="flex space-x-2" key={index}>
-                  <UnderlineLink
-                    className="px-1 cursor-pointer"
+                  <Link
+                    className="px-1 cursor-pointer inline-flex items-center font-medium border-b border-dotted hover:border-black/0"
                     href={item.url}
+                    target="_blank"
                   >
                     {item.name}
-                  </UnderlineLink>
+                  </Link>
                 </div>
               ))}
             </div>
             <div className="flex-col gap-2">
               {socialMedia.slice(3, 6).map((item, index) => (
                 <div className="flex space-x-2 gap-4" key={index}>
-                  <UnderlineLink
-                    className="px-1 cursor-pointer"
+                  <Link
+                    className="px-1 cursor-pointer inline-flex items-center font-medium border-b border-dotted hover:border-black/0"
                     href={item.url}
+                    target="_blank"
                   >
                     {item.name}
-                  </UnderlineLink>
+                  </Link>
                 </div>
               ))}
             </div>
             <div className="flex-col gap-2">
               {socialMedia.slice(6, 9).map((item, index) => (
                 <div className="flex space-x-2 gap-4" key={index}>
-                  <UnderlineLink
-                    className="px-1 cursor-pointer"
+                  <Link
+                    className="px-1 cursor-pointer inline-flex items-center font-medium border-b border-dotted hover:border-black/0"
                     href={item.url}
+                    target="_blank"
                   >
                     {item.name}
-                  </UnderlineLink>
+                  </Link>
                 </div>
               ))}
             </div>

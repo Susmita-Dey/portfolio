@@ -5,7 +5,7 @@ import { Process } from "@/components/Process";
 import ProjectsSection from "@/components/ProjectsSection";
 import SkillsSection from "@/components/SkillsSection";
 import TestimonialSection from "@/components/TestimonialSection";
-import { TextRevealCardPreview } from "@/components/TextRevealCardPreview";
+import { HomePageContact } from "@/components/HomePageContact";
 
 const HomePage = () => {
   return (
@@ -21,7 +21,7 @@ const HomePage = () => {
       {/* Services Section - Bento Grids */}
       {/* My Approach */}
       <Process />
-      <TextRevealCardPreview />{" "}
+      <HomePageContact />{" "}
       {/* A better section asking if interested in working together */}
     </section>
   );

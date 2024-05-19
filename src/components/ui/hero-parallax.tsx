@@ -9,6 +9,7 @@ import {
 } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { Button } from "./button";
 
 export const HeroParallax = ({
   projects,
@@ -56,6 +57,7 @@ export const HeroParallax = ({
   );
   return (
     <div
+      id="work"
       ref={ref}
       className="h-[360vh] max-w-full py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
@@ -112,6 +114,11 @@ export const Header = () => {
         frameworks. People call me a passionate developer and designer that love
         to build amazing projects.
       </p>
+      <Link href="/work">
+        <Button size="lg" className="text-base font-bold my-4">
+          View More Projects
+        </Button>
+      </Link>
     </div>
   );
 };

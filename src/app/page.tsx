@@ -1,6 +1,7 @@
 import ExperienceSection from "@/components/ExperienceSection";
 import HeroSection from "@/components/HeroSection";
 import LogoSlider from "@/components/LogoSlider";
+import { Process } from "@/components/Process";
 import ProjectsSection from "@/components/ProjectsSection";
 import SkillsSection from "@/components/SkillsSection";
 import TestimonialSection from "@/components/TestimonialSection";
@@ -17,7 +18,11 @@ const HomePage = () => {
       <ExperienceSection />
       <ProjectsSection />
       <TestimonialSection />
-      <TextRevealCardPreview />
+      {/* Services Section - Bento Grids */}
+      {/* My Approach */}
+      <Process />
+      <TextRevealCardPreview />{" "}
+      {/* A better section asking if interested in working together */}
     </section>
   );
 };

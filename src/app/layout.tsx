@@ -4,6 +4,7 @@ import "./globals.css";
 import Navigation from "@/components/Navigation";
 import { ThemeProvider } from "@/components/theme-provider";
 import Footer from "@/components/Footer";
+import { MobileNav } from "@/components/MobileNav";
 // import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -30,6 +31,7 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             <Navigation />
+            <MobileNav />
             {children}
             <Footer />
             {/* <Analytics /> */}

@@ -28,7 +28,7 @@ const LogoSlider = () => {
     <div className="relative h-full w-full overflow-hidden py-12 bg-backgroundColorTertiary">
       <div className="absolute inset-0 z-20 before:absolute before:left-0 before:top-0 before:w-40 before:h-full before:bg-gradient-to-r before:from-transparent before:to-transparent before:filter before:blur-3 after:absolute after:right-0 after:top-0 after:w-40 after:h-full after:bg-gradient-to-l after:from-transparent after:to-transparent after:filter after:blur-3"></div>
 
-      <h2 className="flex items-center justify-center text-4xl font-semibold pb-8 text-textColorPrimary">
+      <h2 className="flex items-center justify-center md:text-4xl text-2xl font-semibold pb-8 text-textColorPrimary">
         Companies I have worked with...
       </h2>
       <motion.div

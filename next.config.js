@@ -12,6 +12,6 @@ module.exports = {
     ];
   },
   images: {
-    domains: ["aceternity.com", "media.licdn.com"],
+    domains: ["media.licdn.com", "fueler.io"],
   },
 };

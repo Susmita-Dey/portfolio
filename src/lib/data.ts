@@ -57,7 +57,6 @@ export const experiencesData = [
     location: "Remote, India",
     description:
       "Successfully edited some tech blogs and managed content SEO to make it ready to publish under the company's blog page. I used Wordpress to complete the tasks.",
-    icon: React.createElement(MdWork),
     date: "May 2022 - June 2022",
   },
   {
@@ -68,7 +67,6 @@ export const experiencesData = [
     location: "Remote, India",
     description:
       "Acted as a brand ambassador for their Open Source Project and help them in getting useful github repositories and resources so that they can help beginners to get started with Sema and Github.",
-    icon: React.createElement(MdVolunteerActivism),
     date: "June 2022 - Sep 2022",
   },
   {
@@ -79,7 +77,6 @@ export const experiencesData = [
     location: "Remote, India",
     description:
       "Played many different roles being part of the community core team under Kunal Kushwaha. Designed many thumbnails and posters, wrote few technical blogs and managed/maintained the website along with building some web pages.",
-    icon: React.createElement(MdVolunteerActivism),
     date: "Aug 2022 - Jan 2024",
   },
   {
@@ -90,7 +87,6 @@ export const experiencesData = [
     location: "Remote, India",
     description:
       "Built an image gallery website using Next.js, Tailwind CSS and AWS S3 along with 3 more members in the team. Utilized by over 1000 individuals, both within and beyond the Fueler community.",
-    icon: React.createElement(MdWork),
     date: "Jan 2023 - Feb 2023",
   },
   {
@@ -101,7 +97,6 @@ export const experiencesData = [
     location: "Remote, India",
     description:
       "Constructed 2 responsive e-commerce websites, aligned with assigned tasks and ensuring optimal user experience. Enhanced website performance by 50% through the implementation of Next.js and various JavaScript frameworks and animation libraries.",
-    icon: React.createElement(MdWork),
     date: "Feb 2023 - May 2023",
   },
   {
@@ -112,7 +107,6 @@ export const experiencesData = [
     location: "Remote, India",
     description:
       "Worked on developing Scirque's mobile and web application; learned React Native practically. Fixed some major bugs in the application and worked on optimizing some features with suitable technical solutions.",
-    icon: React.createElement(MdWork),
     date: "Oct 2023 - Dec 2023",
   },
   {
@@ -123,7 +117,6 @@ export const experiencesData = [
     location: "Remote, India",
     description:
       "Designed social media posters, carousels, inforgraphics using Figma and Canva. Also, edited some yoga videos for their Instagram page.",
-    icon: React.createElement(MdWork),
     date: "Feb 2024 - Apr 2024",
   },
   {
@@ -134,104 +127,98 @@ export const experiencesData = [
     location: "Remote, USA",
     description:
       "Worked on developing EduacateUsGPT web application. It's a doc-based tutorial website used to learn Data Mining and Analytics",
-    icon: React.createElement(GiTakeMyMoney),
     date: "March 2024 - Apr 2024",
   },
 ];
 
 export const projects = [
   {
-    title: "Moonbeam",
-    link: "https://gomoonbeam.com",
+    title: "Elicia Capuccino Coffee Bag Packaging Design",
+    link: "https://www.figma.com/file/3sEww4TQrookAlG2I0kGMu/Elicia-Capuccino-Coffee-Bag-Packaging-Design?type=design&node-id=1%3A15&mode=design&t=hjggxTFGW4RisQfR-1",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/moonbeam.png",
+      "https://fueler.io/storage/users/timeline_image/1708846867-eipik0ehklhiiob6qctv.png",
   },
   {
-    title: "Cursor",
-    link: "https://cursor.so",
+    title: "A Collection of Thumbnail Projects",
+    link: "https://www.canva.com/design/DAF1RGnE8QI/ffirowgRKiY301ftUsAtWw/edit?utm_content=DAF1RGnE8QI",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/cursor.png",
+      "https://fueler.io/storage/users/timeline_image/1701270117-vp78cmcikvikmcmnzzad.jpg",
   },
   {
-    title: "Rogue",
-    link: "https://userogue.com",
+    title: "JetProtocol: Cryto Website Landing page",
+    link: "https://jet-protocol-lovat.vercel.app/",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/rogue.png",
-  },
-
-  {
-    title: "Editorially",
-    link: "https://editorially.org",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/editorially.png",
-  },
-  {
-    title: "Editrix AI",
-    link: "https://editrix.ai",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/editrix.png",
-  },
-  {
-    title: "Pixel Perfect",
-    link: "https://app.pixelperfect.quest",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/pixelperfect.png",
+      "https://fueler.io/storage/users/timeline_image/1697203375-qegwaxm0ng50wxairffe.jpg",
   },
 
   {
-    title: "Algochurn",
-    link: "https://algochurn.com",
+    title: "ProManager",
+    link: "https://promanager.vercel.app/",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/algochurn.png",
+      "https://fueler.io/storage/users/timeline_image/1690558591-xla1f467ouo8dmytnu74.gif",
   },
   {
-    title: "Aceternity UI",
-    link: "https://ui.aceternity.com",
+    title: "VRooze Mark X Landing Page Design",
+    link: "https://teal-direction-816217.framer.app/",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/aceternityui.png",
+      "https://fueler.io/storage/users/timeline_image/1695815595-ceucok81wc2g7bz32tan.jpg",
   },
   {
-    title: "Tailwind Master Kit",
-    link: "https://tailwindmasterkit.com",
+    title: "CodeOpsEditor: Online Free Editor for the Cloud",
+    link: "https://codeops-editor.vercel.app/",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/tailwindmasterkit.png",
-  },
-  {
-    title: "SmartBridge",
-    link: "https://smartbridgetech.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/smartbridge.png",
-  },
-  {
-    title: "Renderwork Studio",
-    link: "https://renderwork.studio",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/renderwork.png",
+      "https://fueler.io/storage/users/timeline_image/1695815802-wljsb8vasx9jsknycapw.png",
   },
 
   {
-    title: "Creme Digital",
-    link: "https://cremedigital.com",
+    title: "Calendar",
+    link: "https://space-travel-calendar.webflow.io/",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/cremedigital.png",
+      "https://fueler.io/storage/users/timeline_image/1695810857-643d252cea3ee5cdc181f2be_Calendar-app.jpg",
   },
   {
-    title: "Golden Bells Academy",
-    link: "https://goldenbellsacademy.com",
+    title: "EngimaPeak",
+    link: "https://chocolate-truly-970929.framer.app/",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/goldenbellsacademy.png",
+      "https://fueler.io/storage/users/timeline_image/1695815841-pbnxtz7ryjidnlbbj2ms.jpg",
   },
   {
-    title: "Invoker Labs",
-    link: "https://invoker.lol",
+    title: "Cool Yoga Themed T-Shirt Designs",
+    link: "https://dribbble.com/shots/20888357-Cool-Yoga-Themed-T-Shirt-Designs",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/invoker.png",
+      "https://fueler.io/storage/users/timeline_image/1695810066-e0rvcnpg15ekgd0wf85c.jpg",
   },
   {
-    title: "E Free Invoice",
-    link: "https://efreeinvoice.com",
+    title: "Fueler Wallpaper Collection [NextJS]",
+    link: "https://fueler-wallpaper.netlify.app/",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/efreeinvoice.png",
+      "https://fueler.io/storage/users/timeline_image/1676450226-fueler-wallpaper-meta-image.jpg",
+  },
+  {
+    title: "EducateUsGPT",
+    link: "https://educateusai.vercel.app/",
+    thumbnail: "/educateusgpt.png",
+  },
+
+  {
+    title: "PetMe",
+    link: "https://susmita-dey.github.io/PetMe/",
+    thumbnail: "/PetMe.webp",
+  },
+  {
+    title: "Sukoon",
+    link: "https://sukoon-stress-free.netlify.app/",
+    thumbnail: "/Sukoon.webp",
+  },
+  {
+    title: "All Round Calculator",
+    link: "https://www.npmjs.com/package/all-round-calculator",
+    thumbnail: "/All-round-calculator.svg",
+  },
+  {
+    title: "ZyncaBiotics",
+    link: "https://zyncabiotics.com/",
+    thumbnail: "/Zynca.webp",
   },
 ];
 
@@ -288,5 +275,44 @@ export const testimonials = [
     social: "https://linkedin.com/in/swati-ajmani-8a22095b/",
     quote:
       "As an SDE Intern, Susmita showcased remarkable diligence and dedication throughout her tenure. Her hardworking nature and commitment to learning were evident in her contributions to our projects. We are confident that Susmita will continue to excel in her future endeavors, and we wish her the very best.",
+  },
+];
+
+export const socialMedia = [
+  {
+    name: "GitHub",
+    url: "https://github.com/Susmita-Dey",
+  },
+  {
+    name: "Twitter",
+    url: "https://twitter.com/its_Susmita_Dey",
+  },
+  {
+    name: "LinkedIn",
+    url: "https://www.linkedin.com/in/susmitacodes/",
+  },
+  {
+    name: "Instagram",
+    url: "https://www.instagram.com/SusmitaDeyOfficial/",
+  },
+  {
+    name: "Dribbble",
+    url: "https://dribbble.com/susmitadey475",
+  },
+  {
+    name: "Behance",
+    url: "https://behance.net/susmitadey475",
+  },
+  {
+    name: "YouTube",
+    url: "https://www.youtube.com/channel/UCsuzc8lqAbgUYo4yzpjtfSw",
+  },
+  {
+    name: "Upwork",
+    url: "https://www.upwork.com/freelancers/~010d0c1e617eedd8cf",
+  },
+  {
+    name: "Discord",
+    url: "https://discord.gg/g7FmxB9uZp",
   },
 ];

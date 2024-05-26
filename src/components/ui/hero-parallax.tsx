@@ -71,7 +71,7 @@ export const HeroParallax = ({
         }}
         className=""
       >
-        <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-20">
+        <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 md:mb-20 mb-10">
           {firstRow.map((project) => (
             <ProjectCard
               project={project}
@@ -80,7 +80,7 @@ export const HeroParallax = ({
             />
           ))}
         </motion.div>
-        <motion.div className="flex flex-row mb-20 space-x-20 ">
+        <motion.div className="flex flex-row md:mb-20 mb-10 space-x-20 ">
           {secondRow.map((project) => (
             <ProjectCard
               project={project}

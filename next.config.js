@@ -23,6 +23,11 @@ module.exports = {
         hostname: 'fueler.io',
         pathname: '**',
       },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+        pathname: '**',
+      },
     ],
   },
 };

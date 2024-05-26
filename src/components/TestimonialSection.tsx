@@ -1,7 +1,5 @@
 import React from "react";
-import { BentoGridDemo } from "./BentoGridDemo";
 import { fonts, testimonials } from "@/lib/data";
-import Image from "next/image";
 import Link from "next/link";
 import { LinkedInLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
 
@@ -13,7 +11,7 @@ const Skeleton = ({ children }: { children: React.ReactNode }) => (
 
 const TestimonialSection = () => {
   return (
-    <div className="flex-col w-full my-10 dark:bg-dot-white/[0.1] bg-dot-black/[0.2] relative flex items-center justify-center">
+    <section className="flex-col w-full my-10 dark:bg-dot-white/[0.1] bg-dot-black/[0.2] relative flex items-center justify-center">
       <h2 className="text-3xl sm:text-5xl font-bold py-4">
         What they are saying about me...
       </h2>
@@ -86,7 +84,7 @@ const TestimonialSection = () => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

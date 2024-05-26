@@ -27,7 +27,7 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "embla-carousel-react": "^8.0.4",
-    "framer-motion": "^11.1.9",
+    "framer-motion": "^11.2.6",
     "gsap": "^3.12.5",
     "mini-svg-data-uri": "^1.4.4",
     "next": "14.2.3",

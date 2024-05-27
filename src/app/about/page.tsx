@@ -1,7 +1,8 @@
 import SkillsSection from "@/components/SkillsSection";
-import { TracingBeamDemo } from "@/components/TrackingBeamDemo";
+// import { TracingBeamDemo } from "@/components/TrackingBeamDemo";
+import { ImagesSlider } from "@/components/ui/ImagesSlider";
 import { Separator } from "@/components/ui/separator";
-import { fonts, generalSkills } from "@/lib/data";
+import { certificates, fonts, generalSkills } from "@/lib/data";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -72,9 +73,9 @@ const AboutPage = () => {
             Susmita is a sweet, smart and intelligent girl based in Kolkata,
             India. She loves to code, explore new technologies, listen to music,
             watch movies and travel. Beyond all her achievements and failures,
-            there's an interesting story of her life. Her tech journey started
-            way before she was admitted to college in Computer Science Major but
-            she was unaware of it.
+            there&apos;s an interesting story of her life. Her tech journey
+            started way before she was admitted to college in Computer Science
+            Major but she was unaware of it.
           </p>
           {/* Schooling */}
           <div className="flex flex-col space-y-2">
@@ -110,9 +111,16 @@ const AboutPage = () => {
         </div>
       </div>
       <Separator />
-      <h2 className="text-3xl w-80 font-medium text-center text-balance tracking-tight">
-        Gallery of <span className="text-primary">Achievements.</span>
-      </h2>
+      <div className="flex flex-col space-y-6 justify-center items-center my-10">
+        <h2 className="md:text-5xl text-3xl font-medium text-center mb-5 text-balance tracking-tight">
+          Gallery of <span className="text-primary">Achievements</span>
+        </h2>
+        <ImagesSlider
+          className="w-full md:h-[80vh]"
+          images={certificates}
+          overlay="false"
+        />
+      </div>
       {/* Story of Getting into tech */}
       {/* <TracingBeamDemo /> */}
     </section>

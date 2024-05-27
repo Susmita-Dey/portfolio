@@ -142,91 +142,120 @@ export const experiencesData = [
 export const projects = [
   {
     title: "Elicia Capuccino Coffee Bag Packaging Design",
+    des: "Hello World",
     link: "https://www.figma.com/file/3sEww4TQrookAlG2I0kGMu/Elicia-Capuccino-Coffee-Bag-Packaging-Design?type=design&node-id=1%3A15&mode=design&t=hjggxTFGW4RisQfR-1",
-    thumbnail:
-      "https://fueler.io/storage/users/timeline_image/1708846867-eipik0ehklhiiob6qctv.png",
+    thumbnail: "/Elicia-Capuccino.png",
+    iconLists: ["/figma_logo.svg"],
   },
   {
     title: "A Collection of Thumbnail Projects",
+    des: "Hello World",
     link: "https://www.canva.com/design/DAF1RGnE8QI/ffirowgRKiY301ftUsAtWw/edit?utm_content=DAF1RGnE8QI",
     thumbnail:
       "https://fueler.io/storage/users/timeline_image/1701270117-vp78cmcikvikmcmnzzad.jpg",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
   },
   {
     title: "JetProtocol: Cryto Website Landing page",
+    des: "Hello World",
     link: "https://jet-protocol-lovat.vercel.app/",
     thumbnail:
       "https://fueler.io/storage/users/timeline_image/1697203375-qegwaxm0ng50wxairffe.jpg",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
   },
 
   {
     title: "ProManager",
+    des: "Hello World",
     link: "https://promanager.vercel.app/",
     thumbnail:
       "https://fueler.io/storage/users/timeline_image/1690558591-xla1f467ouo8dmytnu74.gif",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
   },
   {
     title: "VRooze Mark X Landing Page Design",
+    des: "Hello World",
     link: "https://teal-direction-816217.framer.app/",
     thumbnail:
       "https://fueler.io/storage/users/timeline_image/1695815595-ceucok81wc2g7bz32tan.jpg",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
   },
   {
     title: "CodeOpsEditor: Online Free Editor for the Cloud",
+    des: "Hello World",
     link: "https://codeops-editor.vercel.app/",
     thumbnail:
       "https://fueler.io/storage/users/timeline_image/1695815802-wljsb8vasx9jsknycapw.png",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
   },
 
   {
     title: "Calendar",
+    des: "Hello World",
     link: "https://space-travel-calendar.webflow.io/",
     thumbnail:
       "https://fueler.io/storage/users/timeline_image/1695810857-643d252cea3ee5cdc181f2be_Calendar-app.jpg",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
   },
   {
     title: "EngimaPeak",
+    des: "Hello World",
     link: "https://chocolate-truly-970929.framer.app/",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
     thumbnail:
       "https://fueler.io/storage/users/timeline_image/1695815841-pbnxtz7ryjidnlbbj2ms.jpg",
   },
   {
     title: "Cool Yoga Themed T-Shirt Designs",
+    des: "Hello World",
     link: "https://dribbble.com/shots/20888357-Cool-Yoga-Themed-T-Shirt-Designs",
     thumbnail:
       "https://fueler.io/storage/users/timeline_image/1695810066-e0rvcnpg15ekgd0wf85c.jpg",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
   },
   {
     title: "Fueler Wallpaper Collection [NextJS]",
+    des: "Hello World",
     link: "https://fueler-wallpaper.netlify.app/",
     thumbnail:
       "https://fueler.io/storage/users/timeline_image/1676450226-fueler-wallpaper-meta-image.jpg",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
   },
   {
     title: "EducateUsGPT",
+    des: "Hello World",
     link: "https://educateusai.vercel.app/",
     thumbnail: "/educateusgpt.png",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
   },
 
   {
     title: "PetMe",
+    des: "Hello World",
     link: "https://susmita-dey.github.io/PetMe/",
     thumbnail: "/PetMe.webp",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
   },
   {
     title: "Sukoon",
+    des: "Hello World",
     link: "https://sukoon-stress-free.netlify.app/",
     thumbnail: "/Sukoon.webp",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
   },
   {
     title: "All Round Calculator",
+    des: "Hello World",
     link: "https://www.npmjs.com/package/all-round-calculator",
-    thumbnail: "/All-round-calculator.svg",
+    thumbnail: "/All-round-calculator.png",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
   },
   {
     title: "ZyncaBiotics",
+    des: "Hello World",
     link: "https://zyncabiotics.com/",
     thumbnail: "/Zynca.webp",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
   },
 ];
 
@@ -391,4 +420,14 @@ export const generalSkills = [
   "Video Editing",
   "Technical Writing",
   "Talks & Shows",
+];
+
+export const certificates = [
+  "/certificates/Susmita Dey_Cert_Top Contributor_GSSoC2022.png",
+  "/certificates/SSOC Mentor Certificate.png",
+  "/certificates/AutumnHacks.jpg",
+  "/certificates/Susmita certificate(CSI Robots, Bristol Robotics Lab, UK).png",
+  "/certificates/Holiday Hacks Certificate.png",
+  "/certificates/Hackofiesta Participation Certificate.png",
+  "/certificates/CodingNinjasPythonCertificate.png",
 ];

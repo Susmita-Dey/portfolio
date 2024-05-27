@@ -10,11 +10,11 @@ export function Process() {
     <section className="flex flex-col py-20 w-full justify-center items-center">
       <h2 className="font-bold md:text-5xl text-3xl">
         My{" "}
-        <span className={`text-purple-600 ${fonts.robotoSlab.className}`}>
+        <span className={`text-primary ${fonts.robotoSlab.className}`}>
           Style
         </span>{" "}
         of Working on{" "}
-        <span className={`text-purple-600 ${fonts.robotoSlab.className}`}>
+        <span className={`text-primary ${fonts.robotoSlab.className}`}>
           Projects
         </span>
       </h2>

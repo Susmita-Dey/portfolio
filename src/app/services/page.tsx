@@ -19,7 +19,7 @@ const ServicesPage = () => {
       <div className="flex flex-col justify-center items-center my-10">
         <h2 className=" text-center font-bold md:text-5xl text-3xl mb-10">
           Assisting You With{" "}
-          <span className={`text-purple-600 ${fonts.robotoSlab.className}`}>
+          <span className={`text-primary ${fonts.robotoSlab.className}`}>
             My Services
           </span>
         </h2>

@@ -6,6 +6,7 @@ import ProjectsSection from "@/components/ProjectsSection";
 import SkillsSection from "@/components/SkillsSection";
 import TestimonialSection from "@/components/TestimonialSection";
 import { HomePageContact } from "@/components/HomePageContact";
+import { skillsStack } from "@/lib/data";
 
 const HomePage = () => {
   return (
@@ -14,7 +15,7 @@ const HomePage = () => {
       <section className="flex flex-col">
         <LogoSlider />
       </section>
-      <SkillsSection />
+      <SkillsSection data={skillsStack} />
       <ExperienceSection />
       <ProjectsSection />
       <TestimonialSection />

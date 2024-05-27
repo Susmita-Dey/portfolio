@@ -35,11 +35,11 @@ export function HomePageContact() {
     <section className="flex flex-col gap-4 items-center justify-center w-full">
       <h2 className="font-bold md:text-5xl text-3xl py-10">
         Need a{" "}
-        <span className={`text-purple-600 ${fonts.robotoSlab.className}`}>
+        <span className={`text-primary ${fonts.robotoSlab.className}`}>
           Developer
         </span>{" "}
         or a{" "}
-        <span className={`text-purple-600 ${fonts.robotoSlab.className}`}>
+        <span className={`text-primary ${fonts.robotoSlab.className}`}>
           Designer?
         </span>
       </h2>

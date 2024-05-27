@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useRef } from "react";
-import { skillsStack } from "@/lib/data";
 import { motion, useInView } from "framer-motion";
+import { cn } from "@/lib/utils";
 
 const fadeInAnimationVariants = {
   initial: {
@@ -18,18 +18,38 @@ const fadeInAnimationVariants = {
   }),
 };
 
-const SkillsSection = () => {
+const SkillsSection = ({
+  data,
+  parentClassName,
+  headingClassName,
+  itemsClassName,
+}: {
+  data: Array<String>;
+  parentClassName?: string;
+  headingClassName?: string;
+  itemsClassName?: string;
+}) => {
   const ref = useRef(null);
   const isInView = useInView(ref);
 
   return (
     <section
       ref={ref}
-      className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40"
+      className={cn(
+        "mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40",
+        parentClassName
+      )}
     >
-      <h2 className="text-3xl font-bold mb-10">My Skills</h2>
-      <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
-        {skillsStack.map((skill, index) => (
+      <h2 className={cn("text-3xl font-bold mb-10", headingClassName)}>
+        My Skills
+      </h2>
+      <ul
+        className={cn(
+          "flex flex-wrap justify-center gap-2 text-lg text-gray-800",
+          itemsClassName
+        )}
+      >
+        {data.map((skill, index) => (
           <motion.li
             className="bg-white border-black border-[1.5px] rounded-lg px-5 py-3 dark:bg-white/10 dark:text-white/80"
             key={index}

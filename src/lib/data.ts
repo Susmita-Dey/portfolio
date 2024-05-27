@@ -116,8 +116,8 @@ export const experiencesData = [
     date: "Oct 2023 - Dec 2023",
   },
   {
-    title: "Graphic Designer & Video Editor",
-    type: "Internship",
+    title: "Graphic Designer",
+    type: "Freelance",
     company: "HappyTurtleYoga",
     companyPage: "https://www.instagram.com/happy_turtle_yoga",
     location: "Remote, India",
@@ -377,4 +377,18 @@ export const gridItems = [
     img: "",
     spareImg: "",
   },
+];
+
+export const generalSkills = [
+  "Web Development",
+  "Programming",
+  "Community Management",
+  "App Development",
+  "Web Design",
+  "UI/UX Design",
+  "Product Design",
+  "Graphic Design",
+  "Video Editing",
+  "Technical Writing",
+  "Talks & Shows",
 ];

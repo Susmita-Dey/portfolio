@@ -29,11 +29,9 @@ const Projects = () => {
                 />
               </div>
 
-              <h3 className="max-w-xs !pb-2 !m-0 font-bold text-xl">
-                {item.title}
-              </h3>
+              <h3 className="!m-0 !pb-2 font-bold text-xl">{item.title}</h3>
               <div className="text-base !m-0 !p-0 font-normal">
-                <p className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2">
+                <p className="lg:text-lg lg:font-normal font-light text-sm line-clamp-2">
                   {item.des}
                 </p>
               </div>

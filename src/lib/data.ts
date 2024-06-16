@@ -142,35 +142,41 @@ export const experiencesData = [
 export const projects = [
   {
     title: "Elicia Capuccino Coffee Bag Packaging Design",
-    des: "Hello World",
+    des: "A fictional brand packaging design inspired by the rich flavors of the coffee blend",
     link: "https://www.figma.com/file/3sEww4TQrookAlG2I0kGMu/Elicia-Capuccino-Coffee-Bag-Packaging-Design?type=design&node-id=1%3A15&mode=design&t=hjggxTFGW4RisQfR-1",
     thumbnail: "/Elicia-Capuccino.png",
-    iconLists: ["/figma_logo.svg"],
+    iconLists: ["/figma.svg"],
   },
   {
     title: "A Collection of Thumbnail Projects",
-    des: "Hello World",
+    des: "Creating beautiful and engaging thumbnails for my YouTube channel.",
     link: "https://www.canva.com/design/DAF1RGnE8QI/ffirowgRKiY301ftUsAtWw/edit?utm_content=DAF1RGnE8QI",
     thumbnail:
       "https://fueler.io/storage/users/timeline_image/1701270117-vp78cmcikvikmcmnzzad.jpg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    iconLists: ["/canva.svg", "/figma.svg"],
   },
   {
-    title: "JetProtocol: Cryto Website Landing page",
-    des: "Hello World",
+    title: "JetProtocol: Cryto Website",
+    des: "A landing page developed as an internship home assignment for FuelEd",
     link: "https://jet-protocol-lovat.vercel.app/",
     thumbnail:
       "https://fueler.io/storage/users/timeline_image/1697203375-qegwaxm0ng50wxairffe.jpg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    iconLists: ["/nextjs.svg", "/tail.svg", "/js.svg"],
   },
 
   {
     title: "ProManager",
-    des: "Hello World",
+    des: "A productivity tool designed to supercharge and streamline your project management.",
     link: "https://promanager.vercel.app/",
     thumbnail:
       "https://fueler.io/storage/users/timeline_image/1690558591-xla1f467ouo8dmytnu74.gif",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    iconLists: [
+      "/nextjs.svg",
+      "/re.svg",
+      "/tail.svg",
+      "/js.svg",
+      "/appwrite.svg",
+    ],
   },
   {
     title: "VRooze Mark X Landing Page Design",
@@ -178,7 +184,7 @@ export const projects = [
     link: "https://teal-direction-816217.framer.app/",
     thumbnail:
       "https://fueler.io/storage/users/timeline_image/1695815595-ceucok81wc2g7bz32tan.jpg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    iconLists: ["/figma.svg", "/framer.svg"],
   },
   {
     title: "CodeOpsEditor: Online Free Editor for the Cloud",
@@ -195,13 +201,13 @@ export const projects = [
     link: "https://space-travel-calendar.webflow.io/",
     thumbnail:
       "https://fueler.io/storage/users/timeline_image/1695810857-643d252cea3ee5cdc181f2be_Calendar-app.jpg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    iconLists: ["/figma.svg", "/framer.svg"],
   },
   {
     title: "EngimaPeak",
     des: "Hello World",
     link: "https://chocolate-truly-970929.framer.app/",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    iconLists: ["/figma.svg", "/framer.svg"],
     thumbnail:
       "https://fueler.io/storage/users/timeline_image/1695815841-pbnxtz7ryjidnlbbj2ms.jpg",
   },
@@ -211,7 +217,7 @@ export const projects = [
     link: "https://dribbble.com/shots/20888357-Cool-Yoga-Themed-T-Shirt-Designs",
     thumbnail:
       "https://fueler.io/storage/users/timeline_image/1695810066-e0rvcnpg15ekgd0wf85c.jpg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    iconLists: ["/figma.svg", "/canva.svg"],
   },
   {
     title: "Fueler Wallpaper Collection [NextJS]",
@@ -226,9 +232,8 @@ export const projects = [
     des: "Hello World",
     link: "https://educateusai.vercel.app/",
     thumbnail: "/educateusgpt.png",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    iconLists: ["/nextjs.svg", "/tail.svg", "/ts.svg", "/shadcn.svg"],
   },
-
   {
     title: "PetMe",
     des: "Hello World",

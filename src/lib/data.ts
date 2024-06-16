@@ -180,7 +180,7 @@ export const projects = [
   },
   {
     title: "VRooze Mark X Landing Page Design",
-    des: "Hello World",
+    des: "The web design of a single landing page for the particular product launch.",
     link: "https://teal-direction-816217.framer.app/",
     thumbnail:
       "https://fueler.io/storage/users/timeline_image/1695815595-ceucok81wc2g7bz32tan.jpg",
@@ -188,32 +188,38 @@ export const projects = [
   },
   {
     title: "CodeOpsEditor: Online Free Editor for the Cloud",
-    des: "Hello World",
+    des: "Online web-based code editor you need for programming languages.",
     link: "https://codeops-editor.vercel.app/",
     thumbnail:
       "https://fueler.io/storage/users/timeline_image/1695815802-wljsb8vasx9jsknycapw.png",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    iconLists: [
+      "/re.svg",
+      "/tail.svg",
+      "/mongodb.svg",
+      "/docker.svg",
+      "/nextjs.svg",
+    ],
   },
 
   {
-    title: "Calendar",
-    des: "Hello World",
+    title: "Calendar | Webflow University",
+    des: "The scheduling tool to help you stay organized on Earth & beyond.",
     link: "https://space-travel-calendar.webflow.io/",
     thumbnail:
       "https://fueler.io/storage/users/timeline_image/1695810857-643d252cea3ee5cdc181f2be_Calendar-app.jpg",
-    iconLists: ["/figma.svg", "/framer.svg"],
+    iconLists: ["/figma.svg", "/webflow.svg"],
   },
   {
     title: "EngimaPeak",
-    des: "Hello World",
+    des: "A beautifully crafted mountain-themed web design landing page project.",
     link: "https://chocolate-truly-970929.framer.app/",
-    iconLists: ["/figma.svg", "/framer.svg"],
     thumbnail:
       "https://fueler.io/storage/users/timeline_image/1695815841-pbnxtz7ryjidnlbbj2ms.jpg",
+    iconLists: ["/figma.svg", "/framer.svg"],
   },
   {
     title: "Cool Yoga Themed T-Shirt Designs",
-    des: "Hello World",
+    des: "T-shirt designs based on the theme of Yoga and also on Rainbow colors.",
     link: "https://dribbble.com/shots/20888357-Cool-Yoga-Themed-T-Shirt-Designs",
     thumbnail:
       "https://fueler.io/storage/users/timeline_image/1695810066-e0rvcnpg15ekgd0wf85c.jpg",
@@ -221,46 +227,64 @@ export const projects = [
   },
   {
     title: "Fueler Wallpaper Collection [NextJS]",
-    des: "Hello World",
+    des: "A team project to build a wallpaper showcasing website and download them.",
     link: "https://fueler-wallpaper.netlify.app/",
     thumbnail:
       "https://fueler.io/storage/users/timeline_image/1676450226-fueler-wallpaper-meta-image.jpg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    iconLists: ["/re.svg", "/tail.svg", "/js.svg", "/nextjs.svg"],
   },
   {
     title: "EducateUsGPT",
-    des: "Hello World",
+    des: "A client project based on AI tutorial docs-themed web application",
     link: "https://educateusai.vercel.app/",
     thumbnail: "/educateusgpt.png",
-    iconLists: ["/nextjs.svg", "/tail.svg", "/ts.svg", "/shadcn.svg"],
+    iconLists: [
+      "/nextjs.svg",
+      "/tail.svg",
+      "/ts.svg",
+      "/clerk.svg",
+      "/mongodb.svg",
+    ],
   },
   {
     title: "PetMe",
-    des: "Hello World",
+    des: "MLH's WildHacks II hackathon-winning team project to help stray pets find home.",
     link: "https://susmita-dey.github.io/PetMe/",
     thumbnail: "/PetMe.webp",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    iconLists: [
+      "/html.svg",
+      "/tail.svg",
+      "/css.svg",
+      "/js.svg",
+      "/mongodb.svg",
+    ],
   },
   {
     title: "Sukoon",
-    des: "Hello World",
+    des: "A stress-relieving website designed to promote mental peace and well-being.",
     link: "https://sukoon-stress-free.netlify.app/",
     thumbnail: "/Sukoon.webp",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    iconLists: ["/html.svg", "/tail.svg", "/css.svg", "/js.svg"],
   },
   {
     title: "All Round Calculator",
-    des: "Hello World",
+    des: "My first npm package for all-encompassing wide range of calculations.",
     link: "https://www.npmjs.com/package/all-round-calculator",
     thumbnail: "/All-round-calculator.png",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    iconLists: ["/nodejs.svg", "/js.svg"],
   },
   {
     title: "ZyncaBiotics",
-    des: "Hello World",
+    des: "An e-commerce medicine shop project made as part of internship at Digites.",
     link: "https://zyncabiotics.com/",
     thumbnail: "/Zynca.webp",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    iconLists: [
+      "/re.svg",
+      "/tail.svg",
+      "/js.svg",
+      "/nextjs.svg",
+      "/django.svg",
+    ],
   },
 ];
 

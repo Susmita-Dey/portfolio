@@ -46,7 +46,7 @@ export default async function Projects() {
       <div className="flex flex-wrap items-center justify-center p-4 gap-12">
         {data.map((item) => (
           <div
-            className="h-[30rem] w-[26rem] flex items-center justify-center border-2 rounded-lg"
+            className="h-full w-96 flex items-center justify-center border-2 rounded-lg"
             key={item._id}
           >
             <div className="flex flex-col px-6 py-4 tracking-tight justify-center">
@@ -65,7 +65,7 @@ export default async function Projects() {
 
               <h3 className="!m-0 !pb-2 font-bold text-xl">{item.title}</h3>
               <div className="text-base !m-0 !p-0 font-normal">
-                <p className="lg:text-lg lg:font-normal font-light text-sm line-clamp-2">
+                <p className="lg:text-lg lg:font-normal font-light text-xs line-clamp-3">
                   {item.description}
                 </p>
               </div>

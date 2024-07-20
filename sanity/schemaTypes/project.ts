@@ -31,10 +31,10 @@ export const projectsType = defineType({
       type: 'string',
       options: {
         list: [
-          {title: 'Side Project', value: 'side-project'},
-          {title: 'Freelance Project', value: 'freelance'},
-          {title: 'Internship Project', value: 'internship'},
-          {title: 'Open Source Project', value: 'open-source'},
+          {title: 'Side Project', value: 'Side Project'},
+          {title: 'Freelance Project', value: 'Freelance Project'},
+          {title: 'Internship Project', value: 'Internship Project'},
+          {title: 'Open Source Project', value: 'Open Source Project'},
         ],
       },
     }),

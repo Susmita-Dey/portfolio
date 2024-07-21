@@ -5,7 +5,6 @@ import { ModeToggle } from "./ModeToggle";
 import TransitionLink from "./TransitionLink";
 import { Button } from "./ui/button";
 import { useEffect, useState } from "react";
-import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 
 const Navigation = () => {
   const [scrolling, setScrolling] = useState(false);
@@ -25,7 +24,7 @@ const Navigation = () => {
 
   return (
     <nav
-      className={`w-full p-5 sticky top-0 z-10 hidden md:block ${
+      className={`w-full p-5 sticky top-0 z-30 hidden lg:block ${
         scrolling ? "bg-inherit" : "bg-transparent"
       } `}
     >

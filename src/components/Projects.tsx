@@ -1,40 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "./ui/button";
-import { client } from "@/lib/sanity";
+import { getProjectsData } from "@/lib/sanity";
 import { FaLocationArrow } from "react-icons/fa6";
-
-interface ProjectsCard {
-  title: string;
-  _id: string;
-  description: string;
-  thumbnailUrl: string;
-  link: string;
-  purpose: string;
-  icons: { iconUrl: string }[];
-}
-
-async function getData() {
-  const query = `*[_type == 'project'] | order(_createdAt desc) {
-    title,
-    _id,
-    description,
-    "thumbnailUrl":thumbnail.asset->url,
-    link,
-    purpose,
-    icons[]{
-      'iconUrl':asset->url
-    }
-  }`;
-
-  const data = await client.fetch(query, {}, { next: { revalidate: 30 } });
-  // console.log(data);
-
-  return data;
-}
+import { ProjectsCard } from "@/lib/types";
 
 export default async function Projects() {
-  const data: ProjectsCard[] = await getData();
+  const data: ProjectsCard[] = await getProjectsData();
   // console.log(data);
 
   return (

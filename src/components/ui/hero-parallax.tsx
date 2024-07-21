@@ -10,16 +10,9 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "./button";
+import { ProjectsCard } from "@/lib/types";
 
-export const HeroParallax = ({
-  projects,
-}: {
-  projects: {
-    title: string;
-    link: string;
-    thumbnail: string;
-  }[];
-}) => {
+export const HeroParallax = ({ projects }: { projects: ProjectsCard[] }) => {
   const firstRow = projects.slice(0, 5);
   const secondRow = projects.slice(5, 10);
   const thirdRow = projects.slice(10, 15);
@@ -57,9 +50,8 @@ export const HeroParallax = ({
   );
   return (
     <div
-      id="work"
       ref={ref}
-      className="h-[360vh] max-w-full py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="lg:h-[380vh] md:h-[240vh] h-[380vh] py-40 overflow-hidden lg:px-96 antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
       <Header />
       <motion.div
@@ -71,8 +63,8 @@ export const HeroParallax = ({
         }}
         className=""
       >
-        <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 md:mb-20 mb-10">
-          {firstRow.map((project) => (
+        <motion.div className="flex flex-row-reverse space-x-reverse space-x-10 mb-20">
+          {firstRow.map((project: ProjectsCard) => (
             <ProjectCard
               project={project}
               translate={translateX}
@@ -80,8 +72,8 @@ export const HeroParallax = ({
             />
           ))}
         </motion.div>
-        <motion.div className="flex flex-row md:mb-20 mb-10 space-x-20 ">
-          {secondRow.map((project) => (
+        <motion.div className="flex flex-row mb-20 space-x-10">
+          {secondRow.map((project: ProjectsCard) => (
             <ProjectCard
               project={project}
               translate={translateXReverse}
@@ -89,8 +81,8 @@ export const HeroParallax = ({
             />
           ))}
         </motion.div>
-        <motion.div className="flex flex-row-reverse space-x-reverse space-x-20">
-          {thirdRow.map((project) => (
+        <motion.div className="flex flex-row-reverse space-x-reverse space-x-10">
+          {thirdRow.map((project: ProjectsCard) => (
             <ProjectCard
               project={project}
               translate={translateX}
@@ -127,11 +119,7 @@ export const ProjectCard = ({
   project,
   translate,
 }: {
-  project: {
-    title: string;
-    link: string;
-    thumbnail: string;
-  };
+  project: ProjectsCard;
   translate: MotionValue<number>;
 }) => {
   return (
@@ -143,17 +131,17 @@ export const ProjectCard = ({
         y: -20,
       }}
       key={project.title}
-      className="group/project h-96 w-[30rem] relative flex-shrink-0"
+      className="group/project relative h-96 min-w-full lg:w-1/2 flex-shrink-0"
     >
       <Link
         href={project.link}
-        className="block group-hover/project:shadow-2xl "
+        className="block group-hover/project:shadow-2xl"
+        target="_blank"
       >
         <Image
-          src={project.thumbnail}
-          height="600"
-          width="600"
-          className="object-cover object-left-top absolute h-full w-full inset-0"
+          src={project.thumbnailUrl}
+          fill
+          className="object-cover object-left-top absolute h-full w-full inset-0 rounded-sm"
           alt={project.title}
         />
       </Link>

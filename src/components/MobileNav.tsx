@@ -26,7 +26,7 @@ export function MobileNav() {
 
   return (
     <nav
-      className={`w-full p-3 flex sticky top-0 z-10 flex-row md:hidden place-items-center justify-between ${
+      className={`w-full p-3 flex sticky top-0 z-30 flex-row lg:hidden place-items-center justify-between ${
         scrolling ? "bg-inherit" : "bg-transparent"
       }`}
     >
@@ -34,7 +34,7 @@ export function MobileNav() {
         <SheetTrigger asChild>
           <Button
             variant="ghost"
-            className="mr-2 px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden"
+            className="mr-2 px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 lg:hidden"
           >
             <svg
               strokeWidth="1.5"
@@ -76,7 +76,7 @@ export function MobileNav() {
               setOpen(true);
             }}
           >
-            <span className="text-xl tracking-tight font-bold light:text-neutral-900 mb-4 sm:mb-0">
+            <span className="text-base tracking-tight font-semibold light:text-neutral-900 mb-4 sm:mb-0">
               susmita.
             </span>
           </Link>
@@ -93,14 +93,19 @@ export function MobileNav() {
           </div>
         </SheetContent>
       </Sheet>
-      <div className="flex flex-row justify-end space-x-2">
-        <ModeToggle />
-        <Link
-          href="https://docs.google.com/document/d/1dotmSNGjDiDVcK5gkoQY1PHGUHHEHqCPBppbVg6CF70/edit?usp=sharing"
-          target="_blank"
-        >
-          <Button size="default">View Resume</Button>
-        </Link>
+      <div className="flex flex-row justify-between items-center gap-4 w-full">
+        <h1 className="text-xl tracking-tight font-semibold light:text-neutral-900 sm:mb-0">
+          <Link href="/">susmita.</Link>
+        </h1>
+        <div className="flex flex-row justify-end space-x-2">
+          <ModeToggle />
+          <Link
+            href="https://docs.google.com/document/d/1dotmSNGjDiDVcK5gkoQY1PHGUHHEHqCPBppbVg6CF70/edit?usp=sharing"
+            target="_blank"
+          >
+            <Button size="default">View Resume</Button>
+          </Link>
+        </div>
       </div>
     </nav>
   );

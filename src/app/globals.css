@@ -94,11 +94,19 @@
       rgba(var(--overlay-color), 0.5) calc(var(--x) + 25%),
       rgba(var(--overlay-color), 0.1) calc(var(--x) + 100%)
     );
-    mask: linear-gradient(black, black) content-box,
+    mask:
+      linear-gradient(black, black) content-box,
       linear-gradient(black, black);
-    -webkit-mask: linear-gradient(black, black) content-box,
+    -webkit-mask:
+      linear-gradient(black, black) content-box,
       linear-gradient(black, black);
     mask-composite: exclude;
     -webkit-mask-composite: xor;
+  }
+}
+
+@layer components {
+  .logo-ticker-image {
+    @apply h-28 w-auto object-cover;
   }
 }

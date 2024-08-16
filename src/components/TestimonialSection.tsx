@@ -29,7 +29,7 @@ const TestimonialSection = async () => {
             key={index}
           >
             <div className="flex flex-col px-2">
-              <div className="py-4 border-b sm:h-48">
+              <div className="py-4 border-b sm:h-fit">
                 <p className={`text-sm ${fonts.robotoSlab.className}`}>
                   &quot;{testimonial.quote}&quot;
                 </p>

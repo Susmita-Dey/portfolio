@@ -12,6 +12,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Susmita Dey",
   description: "Software Developer, Designer & Freelancer",
+  icons: "/favicon.ico",
 };
 
 export default function RootLayout({

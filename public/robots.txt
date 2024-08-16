@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://susmitadey.vercel.app
+
+# Sitemaps
+Sitemap: https://susmitadey.vercel.app/sitemap.xml

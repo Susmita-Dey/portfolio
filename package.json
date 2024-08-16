@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.4",
@@ -32,7 +33,9 @@
     "mini-svg-data-uri": "^1.4.4",
     "next": "14.2.3",
     "next-sanity": "^9.4.2",
+    "next-sitemap": "^4.2.3",
     "next-themes": "^0.3.0",
+    "port": "file:",
     "react": "^18",
     "react-countup": "^6.5.3",
     "react-dom": "^18",

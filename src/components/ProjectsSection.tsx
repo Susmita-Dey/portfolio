@@ -7,7 +7,11 @@ const ProjectsSection = async () => {
   const data: ProjectsCard[] = await getProjectsData();
   // console.log(data);
 
-  return <HeroParallax projects={data} />;
+  return (
+    <section id="work">
+      <HeroParallax projects={data} />
+    </section>
+  );
 };
 
 export default ProjectsSection;

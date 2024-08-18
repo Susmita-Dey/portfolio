@@ -20,7 +20,7 @@ module.exports = {
       },
       {
         protocol: 'https',
-        hostname: 'media.licdn.com',
+        hostname: 'cdn.hashnode.com',
         pathname: '**',
       },
       {

@@ -15,3 +15,39 @@ export interface Testimonial {
   social: string;
   quote: string;
 }
+
+export interface Query {
+  query: string;
+  variables?: object;
+  tags?: Array<string>;
+}
+
+export interface Blog {
+  author: {
+    name: string;
+    profilePicture: string;
+    socialMediaLinks: {
+      twitter: string;
+      linkedin: string;
+    };
+  };
+  content: {
+    html: string;
+  };
+  title: string;
+  slug: string;
+  id: string;
+  coverImage: {
+    url: string;
+  };
+  publishedAt: string;
+  seo: {
+    description: string;
+  };
+}
+
+export interface BlogParams {
+  params: {
+    blogSlug: string;
+  };
+}

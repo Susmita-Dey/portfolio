@@ -12,9 +12,7 @@ const HomePage = () => {
   return (
     <section className="mx-6 my-10 space-y-4 flex flex-col items-center min-h-screen">
       <HeroSection />
-      <section className="flex flex-col">
-        <LogoSlider />
-      </section>
+      <LogoSlider />
       <SkillsSection data={skillsStack} />
       <ExperienceSection />
       <ProjectsSection />

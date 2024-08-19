@@ -113,8 +113,8 @@
     overflow-wrap: break-word; /* Ensures long words wrap correctly */
   }
 
+  .blog-post img iframe,
   .blog-post img,
-  .blog-post iframe,
   .blog-post video {
     max-width: 100%;
     height: auto;

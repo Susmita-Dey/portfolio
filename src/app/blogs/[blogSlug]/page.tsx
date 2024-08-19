@@ -191,7 +191,7 @@ export default async function BlogPage({ params }: BlogParams) {
         </div>
         <article className="w-full xl:order-1 mx-auto prose prose-lg">
           <div
-            className="blog-post"
+            className="blog-post container mx-auto px-4"
             dangerouslySetInnerHTML={{
               __html: blog.content.html,
             }}

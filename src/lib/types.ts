@@ -35,6 +35,8 @@ export interface Blog {
     html: string;
   };
   title: string;
+  subtitle: string;
+  brief: string;
   slug: string;
   id: string;
   coverImage: {
@@ -44,6 +46,12 @@ export interface Blog {
   seo: {
     description: string;
   };
+  ogMetaData: {
+    image: string;
+  };
+  readTimeInMinutes: number;
+  reactionCount: number;
+  views: number;
 }
 
 export interface BlogParams {

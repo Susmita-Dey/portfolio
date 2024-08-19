@@ -110,11 +110,96 @@
     padding: 0 1.5rem;
     line-height: 1.75;
     font-size: 1rem;
-    /* color: #374151;  */
-    /* Tailwind's zinc-600 equivalent */
+    overflow-wrap: break-word; /* Ensures long words wrap correctly */
   }
 
-  .blog-post img iframe {
+  .blog-post img,
+  .blog-post iframe,
+  .blog-post video {
+    max-width: 100%;
+    height: auto;
+    margin: 1rem 0;
+    border-radius: 0.75rem;
+    /* display: block; Ensures block-level elements behave properly     */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .blog-post pre {
+    background-color: #f3f4f6;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+    overflow-x: auto; /* Allows horizontal scroll if content is too wide */
+  }
+
+  .blog-post code {
+    background-color: #f3f4f6;
+    color: black;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-family: "Courier New", Courier, monospace;
+    white-space: pre-wrap; /* Ensures long code lines wrap */
+    word-wrap: break-word;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .blog-post {
+      padding: 0 1rem;
+    }
+
+    .blog-post img,
+    .blog-post iframe,
+    .blog-post video {
+      max-width: 100%;
+      height: auto;
+      margin: 1rem 0;
+      display: block;
+      overflow: hidden;
+    }
+
+    .blog-post pre {
+      white-space: pre-wrap; /* Prevents code from overflowing on mobile */
+      word-wrap: break-word;
+      overflow-x: auto; /* Enables horizontal scrolling for code blocks */
+    }
+
+    .blog-post code {
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .blog-post {
+      padding: 0 0.5rem;
+    }
+
+    .blog-post img,
+    .blog-post iframe,
+    .blog-post video {
+      max-width: 100%;
+      height: auto;
+      margin: 1rem 0;
+      display: block;
+      overflow: hidden;
+    }
+
+    .blog-post pre {
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      overflow-x: auto;
+    }
+
+    .blog-post code {
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+  }
+
+  .blog-post img {
     max-width: 100%;
     height: auto;
     margin: 1rem 0;
@@ -124,23 +209,23 @@
     align-items: center;
   }
 
-  .blog-post iframe video {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  .blog-post iframe,
+  .blog-post video {
     max-width: 100%;
     height: auto;
     margin: 1rem 0;
     border-radius: 0.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .blog-post h2,
   .blog-post h3 {
     margin-top: 2rem;
+    margin-bottom: 1rem;
     font-weight: 600;
-    /* color: #1f2937;  */
-    /* Tailwind's gray-800 */
+    line-height: normal;
   }
 
   .blog-post h2 {
@@ -155,37 +240,41 @@
     font-size: 1.25rem;
   }
 
-  .blog-post em i {
+  .blog-post em,
+  .blog-post i {
     font-style: italic;
   }
 
-  .blog-post strong b {
-    font-style: bold;
+  .blog-post strong,
+  .blog-post b {
+    font-weight: bold;
   }
 
+  .blog-post h5,
+  .blog-post h6,
   .blog-post p {
     margin-bottom: 1.5rem;
     font-size: 1.125rem;
-    /* color: #4b5563;  */
-    /* Tailwind's zinc-500 */
   }
 
   .blog-post blockquote {
-    border-left: 4px solid #e5e7eb; /* Tailwind's zinc-200 */
+    border-left: 4px solid #e5e7eb;
     padding-left: 1rem;
-    color: #6b7280; /* Tailwind's zinc-600 */
+    color: #6b7280;
     margin: 1.5rem 0;
     font-style: italic;
   }
 
   .blog-post hr {
     border: 0.2px solid #6b7280;
+    margin-bottom: 1rem;
   }
 
   .blog-post ul,
   .blog-post ol {
     padding-left: 2rem;
     margin-bottom: 1.5rem;
+    word-wrap: break-word;
   }
 
   .blog-post ul li {
@@ -199,27 +288,27 @@
   }
 
   .blog-post a {
-    color: #3b82f6; /* Tailwind's blue-500 */
+    color: #3b82f6;
     text-decoration: underline;
   }
 
   .blog-post a:hover {
-    color: #2563eb; /* Tailwind's blue-600 */
+    color: #2563eb;
   }
 
-  .blog-post pre {
-    background-color: #f3f4f6; /* Tailwind's zinc-100 */
-    padding: 1rem;
-    border-radius: 0.5rem;
-    overflow-x: auto;
-  }
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .blog-post h2 {
+      font-size: 1.75rem;
+    }
 
-  .blog-post code {
-    background-color: #f3f4f6; /* Tailwind's zinc-100 */
-    color: black;
-    padding: 0.25rem 0.5rem;
-    border-radius: 0.25rem;
-    font-family: "Courier New", Courier, monospace;
+    .blog-post h3 {
+      font-size: 1.375rem;
+    }
+
+    .blog-post p {
+      font-size: 1rem;
+    }
   }
 }
 /* 

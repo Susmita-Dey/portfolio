@@ -21,6 +21,7 @@ export default async function Blogs() {
                       url
                     }
                     publishedAt
+                    brief
                     seo {
                       description
                     }
@@ -55,11 +56,13 @@ export default async function Blogs() {
                 className="rounded border border-zinc-300 w-full h-full hover:scale-95"
               />
             </Link>
-            <span className="mx-5">
+            <span className="md:mx-5 md:my-0 my-2 w-full">
               <h2 className="text-2xl pb-5 border-b-2 mb-5 hover:text-blue-700">
                 <Link href={`/blogs/${blog.slug}`}>{blog.title}</Link>
               </h2>
-              <p className="italic text-base my-2">{blog.seo.description}</p>
+              <p className="italic text-base my-2">
+                {blog.seo.description ? blog.seo.description : blog.brief}
+              </p>
               <p className="flex font-mono font-medium text-current/85 mt-4">
                 <GiCalendar className="text-xl mx-1 mt-0.5 font-bold" />
                 {new Date(blog.publishedAt).toLocaleDateString("en-us", {

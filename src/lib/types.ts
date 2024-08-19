@@ -51,3 +51,16 @@ export interface BlogParams {
     blogSlug: string;
   };
 }
+
+export interface Comment {
+  id: string;
+  content: {
+    text: string;
+  };
+  author: {
+    username: string;
+    name: string;
+    profilePicture: string;
+  };
+  dateAdded: string;
+}

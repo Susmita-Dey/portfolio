@@ -3,6 +3,7 @@ import { query } from "@/utils/hashnode";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { GiCalendar } from "react-icons/gi";
 
 export default async function Blogs() {
   const {
@@ -20,6 +21,9 @@ export default async function Blogs() {
                       url
                     }
                     publishedAt
+                    seo {
+                      description
+                    }
                   }
                 }
               }
@@ -48,14 +52,16 @@ export default async function Blogs() {
                 width={600}
                 height={400}
                 alt={blog.title}
-                className="rounded border border-zinc-300 w-full h-full"
+                className="rounded border border-zinc-300 w-full h-full hover:scale-95"
               />
             </Link>
             <span className="mx-5">
-              <h2 className="text-2xl pb-5 border-b-2 mb-5">
+              <h2 className="text-2xl pb-5 border-b-2 mb-5 hover:text-blue-700">
                 <Link href={`/blogs/${blog.slug}`}>{blog.title}</Link>
               </h2>
-              <p className="text-zinc-200">
+              <p className="italic text-base my-2">{blog.seo.description}</p>
+              <p className="flex font-mono font-medium text-current/85 mt-4">
+                <GiCalendar className="text-xl mx-1 mt-0.5 font-bold" />
                 {new Date(blog.publishedAt).toLocaleDateString("en-us", {
                   weekday: "long",
                   year: "numeric",

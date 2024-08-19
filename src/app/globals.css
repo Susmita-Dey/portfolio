@@ -114,7 +114,21 @@
     /* Tailwind's zinc-600 equivalent */
   }
 
-  .blog-post img {
+  .blog-post img iframe {
+    max-width: 100%;
+    height: auto;
+    margin: 1rem 0;
+    border-radius: 0.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .blog-post iframe video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     max-width: 100%;
     height: auto;
     margin: 1rem 0;
@@ -137,8 +151,21 @@
     font-size: 1.5rem;
   }
 
+  .blog-post h4 {
+    font-size: 1.25rem;
+  }
+
+  .blog-post em i {
+    font-style: italic;
+  }
+
+  .blog-post strong b {
+    font-style: bold;
+  }
+
   .blog-post p {
     margin-bottom: 1.5rem;
+    font-size: 1.125rem;
     /* color: #4b5563;  */
     /* Tailwind's zinc-500 */
   }
@@ -151,16 +178,24 @@
     font-style: italic;
   }
 
+  .blog-post hr {
+    border: 0.2px solid #6b7280;
+  }
+
   .blog-post ul,
   .blog-post ol {
     padding-left: 2rem;
     margin-bottom: 1.5rem;
   }
 
-  .blog-post ul li,
-  .blog-post ol li {
+  .blog-post ul li {
     margin-bottom: 0.75rem;
     list-style: disc;
+  }
+
+  .blog-post ol li {
+    margin-bottom: 0.75rem;
+    list-style: decimal;
   }
 
   .blog-post a {
@@ -181,6 +216,7 @@
 
   .blog-post code {
     background-color: #f3f4f6; /* Tailwind's zinc-100 */
+    color: black;
     padding: 0.25rem 0.5rem;
     border-radius: 0.25rem;
     font-family: "Courier New", Courier, monospace;

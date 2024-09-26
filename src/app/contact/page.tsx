@@ -200,7 +200,7 @@ const ContactPage = () => {
                 </span>
               </span>
             </span>
-            <Separator />
+{/*             <Separator />
             <span className="flex flex-col space-y-2">
               <span className="flex flex-row">
                 <MdCall className="mt-0.5 text-2xl mr-1" /> Call Us
@@ -211,7 +211,7 @@ const ContactPage = () => {
               >
                 +91 96417 50345
               </Link>
-            </span>
+            </span> */}
             <Separator />
             <span className="flex flex-col space-y-2">
               <span className="flex flex-row">

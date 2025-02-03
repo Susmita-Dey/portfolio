@@ -100,7 +100,7 @@ export function MobileNav() {
         <div className="flex flex-row justify-end space-x-2">
           <ModeToggle />
           <Link
-            href="https://docs.google.com/document/d/1dotmSNGjDiDVcK5gkoQY1PHGUHHEHqCPBppbVg6CF70/edit?usp=sharing"
+            href="https://drive.google.com/file/d/1iNvC2tndfx8yw8pS8G6XDrAVlbe7uCLZ/view?usp=sharing"
             target="_blank"
           >
             <Button size="default">View Resume</Button>

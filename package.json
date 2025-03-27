@@ -31,7 +31,7 @@
     "framer-motion": "^11.2.6",
     "gsap": "^3.12.5",
     "mini-svg-data-uri": "^1.4.4",
-    "next": "14.2.21",
+    "next": "14.2.25",
     "next-sanity": "^9.4.2",
     "next-sitemap": "^4.2.3",
     "next-themes": "^0.3.0",

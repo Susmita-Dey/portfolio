@@ -58,7 +58,7 @@ export default function ExperienceSection() {
               initial="hidden"
               animate={isInView ? "visible" : "hidden"}
               variants={animationVariants}
-              transition={{ duration: 1, delay: index * 0.5 }}
+              transition={{ duration: 1, delay: index * 1 }}
             >
               <div className="flex flex-row justify-between">
                 <div>

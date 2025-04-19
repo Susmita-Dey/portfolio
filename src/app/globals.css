@@ -113,17 +113,59 @@
     overflow-wrap: break-word; /* Ensures long words wrap correctly */
   }
 
+  .blog-post h3{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    line-height: normal;
+  }
+  .blog-post h4 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    line-height: normal;
+  }
+  
   .blog-post img iframe,
+  .blog-post iframe,
   .blog-post img,
   .blog-post video {
+    display: flex;
+    justify-items: center;
+    align-items: center;
     max-width: 100%;
     height: auto;
     margin: 1rem 0;
     border-radius: 0.75rem;
     /* display: block; Ensures block-level elements behave properly     */
+  }
+
+  .blog-post p:has(img),
+  .blog-post p:has(iframe){
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 100%;
+    height: auto;
+    margin: 1rem 0;
+    border-radius: 0.75rem;
+    /* display: block; Ensures block-level elements behave properly     */
+  }
+
+  .blog-post table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    overflow-x: auto; /* Allows horizontal scroll if content is too wide */
+  }
+  .blog-post th, td {
+    padding: 1rem;
+    border: 1px solid #e5e7eb; /* Light border for table cells */
+    text-align: left;
+  }
+  .blog-post th {
+    background-color: #f3f4f6; /* Light background for table headers */
+    font-weight: 600;
   }
 
   .blog-post pre {
@@ -269,6 +311,7 @@
 
   .blog-post hr {
     border: 0.2px solid #6b7280;
+    margin-top: 0.5rem;
     margin-bottom: 1rem;
   }
 
@@ -313,7 +356,7 @@
     }
   }
 }
-/* 
+
 @layer components {
   .logo-ticker-image {
     @apply h-28 w-auto object-cover;
@@ -348,41 +391,109 @@
       left: 250px;
     }
   }
-} */
-
-/* For Hashnode content formatting */
-.blog-content-container img {
-  @apply rounded-lg shadow-md my-6 mx-auto;
 }
 
-.blog-content-container pre {
-  @apply bg-gray-800 text-gray-100 p-4 rounded-lg overflow-x-auto;
+/* styles/code-highlight.css */
+/* Import this file in your global CSS or component */
+
+/* Base styles for code blocks */
+/* Add language label to code blocks */
+pre[data-language]::before {
+  content: attr(data-language);
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: #fc3869;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 0.2rem 0.6rem;
+  border-bottom-right-radius: 0.3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
-.blog-content-container ul {
-  @apply list-disc pl-5 space-y-2 my-4;
+/* Copy button container */
+.code-block-header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  padding: 0.25rem;
+  z-index: 10;
 }
 
-.blog-content-container ol {
-  @apply list-decimal pl-5 space-y-2 my-4;
+/* Copy button styling */
+.copy-code-button {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 0.25rem;
+  color: #aaa;
+  cursor: pointer;
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding: 0.25rem 0.5rem;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
 }
 
-.blog-content-container h2 {
-  @apply text-3xl font-bold mt-8 mb-4;
+.copy-code-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
 }
 
-.blog-content-container h3 {
-  @apply text-2xl font-semibold mt-6 mb-3;
+.copy-code-button:active {
+  transform: scale(0.95);
 }
 
-.blog-content-container p {
-  @apply my-4 leading-relaxed;
+/* Line number styles (optional) */
+.hljs-ln {
+  border-collapse: collapse;
 }
 
-.blog-content-container a {
-  @apply text-blue-600 hover:underline;
+.hljs-ln td {
+  padding: 0;
 }
 
-.blog-content-container blockquote {
-  @apply border-l-4 border-blue-500 pl-4 italic text-gray-600 my-4;
+.hljs-ln-n {
+  color: #666;
+  padding-right: 0.75rem;
+  text-align: right;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+  user-select: none;
+}
+
+/* Inline code styles */
+:not(pre) > code {
+  background-color: rgba(175, 184, 193, 0.2);
+  border-radius: 0.3rem;
+  color: #e83e8c;
+  font-family: monospace;
+  padding: 0.2rem 0.4rem;
+  white-space: normal;
+  font-size: 0.9em;
+}
+
+/* Dark mode adjustments if needed */
+@media (prefers-color-scheme: dark) {
+  :not(pre) > code {
+    background-color: rgba(100, 100, 100, 0.2);
+    color: #ff6b9d;
+  }
+}
+
+/* Add animation for copied state */
+@keyframes copiedAnimation {
+  0% { background-color: rgba(46, 160, 67, 0.2); }
+  100% { background-color: rgba(0, 4, 255, 0.1); }
+}
+
+.copy-code-button .copied {
+  background-color: rgba(46, 160, 67, 0.2);
+  color: #7ce792;
+  animation: copiedAnimation 2s ease forwards;
 }

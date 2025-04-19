@@ -149,21 +149,20 @@ export default async function BlogPage({ params }: BlogParams) {
           </div>
 
           <div className="flex flex-col md:flex-row justify-between md:gap-3">
-            <div className="font-mono flex gap-1 text-zinc-400 mb-2">
+            <div className="font-mono flex gap-1 text-rose-500 mb-2">
               <GiCalendar className="text-xl mx-1 mt-0.5 font-bold" />
               <p>
                 Published on{" "}
                 {new Date(blog.publishedAt).toLocaleDateString("en-us", {
-                  weekday: "long",
                   year: "numeric",
                   month: "short",
                   day: "numeric",
                 })}
               </p>
             </div>
-            <div className="flex gap-1 font-mono text-zinc-400 mb-2">
+            <div className="flex gap-1 font-mono text-rose-500 mb-2">
               <FaBookOpen className="text-xl mx-1 mt-0.5 font-bold" />
-              <p>Estimated Reading Time: {blog.readTimeInMinutes} minutes</p>
+              <p>Reading Time: {blog.readTimeInMinutes} minutes</p>
             </div>
           </div>
 

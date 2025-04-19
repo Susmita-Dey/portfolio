@@ -16,6 +16,13 @@ export interface Testimonial {
   quote: string;
 }
 
+export interface Person {
+  _id:string;
+  client: string;
+  designation: string;
+  clientImg: string;
+}
+
 export interface Query {
   query: string;
   variables?: object;

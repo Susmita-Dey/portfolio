@@ -395,7 +395,25 @@
 
 /* styles/code-highlight.css */
 /* Import this file in your global CSS or component */
+pre {
+  position: relative;
+  border-radius: 0.5rem;
+  background-color: #1e1e1e;
+  padding: 1.25rem;
+  margin: 1.5rem 0;
+  overflow-x: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
+pre code {
+  font-family: "JetBrains Mono", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  display: block;
+  padding: 0;
+  color: #e9e9e9;
+  tab-size: 2;
+}
 /* Base styles for code blocks */
 /* Add language label to code blocks */
 pre[data-language]::before {
@@ -403,8 +421,9 @@ pre[data-language]::before {
   position: absolute;
   top: 0;
   left: 0;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-weight: 500;
+  font-style: italic;
   color: #fc3869;
   background-color: rgba(0, 0, 0, 0.4);
   padding: 0.2rem 0.6rem;

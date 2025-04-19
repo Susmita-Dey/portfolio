@@ -141,7 +141,7 @@ export const ProjectCard = ({
         <Image
           src={project.thumbnailUrl}
           fill
-          className="object-cover object-left-top absolute h-full w-full inset-0 rounded-sm"
+          className="object-fill absolute h-full w-full inset-0 rounded-sm"
           alt={project.title}
         />
       </Link>

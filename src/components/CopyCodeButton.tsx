@@ -1,40 +1,43 @@
-import React, { useState } from 'react';
+"use client";
+
+import { CopyIcon } from '@radix-ui/react-icons';
+import { useState } from 'react';
 import { FaCopy, FaCheck } from 'react-icons/fa';
 
 interface CopyCodeButtonProps {
   code: string;
 }
 
-const CopyCodeButton: React.FC<CopyCodeButtonProps> = ({ code }) => {
+const CopyCodeButton = ({ code }: CopyCodeButtonProps) => {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = async () => {
     try {
       await navigator.clipboard.writeText(code);
       setCopied(true);
-      
-      // Reset copied state after 2 seconds
-      setTimeout(() => {
-        setCopied(false);
-      }, 2000);
+      setTimeout(() => setCopied(false), 2000);
     } catch (err) {
-      console.error('Failed to copy code:', err);
+      console.error('Failed to copy:', err);
     }
   };
 
   return (
-    <button 
-      className={`copy-code-button ${copied ? 'copied' : ''}`} 
+    <button
       onClick={handleCopy}
-      aria-label="Copy code to clipboard"
+      className={`flex items-center absolute top-0 right-0 gap-2 p-2 text-base font-mono transition-all ${
+        copied
+          ? 'text-green-500'
+          : 'text-gray-400 hover:text-white hover:bg-gray-700'
+      }`}
+      aria-label="Copy code"
     >
       {copied ? (
         <>
-          <FaCheck size={12} /> Copied!
+          <FaCheck className="inline" />Copied!
         </>
       ) : (
         <>
-          <FaCopy size={12} /> Copy
+          <CopyIcon className="inline" />Copy
         </>
       )}
     </button>

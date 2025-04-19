@@ -1,6 +1,5 @@
-// components/BlogContent.tsx
 "use client";
-
+import 'highlight.js/styles/github-dark.css'; // Add your preferred style
 import React, { useEffect, useRef } from 'react';
 import CopyCodeButton from './CopyCodeButton';
 
@@ -16,44 +15,46 @@ const BlogContent: React.FC<BlogContentProps> = ({ html }) => {
       if (!containerRef.current) return;
       
       try {
-        // Dynamically import highlight.js to avoid SSR issues
         const hljs = await import('highlight.js');
         
-        // Find all code blocks in the container
         const codeBlocks = containerRef.current.querySelectorAll('pre code');
         
         codeBlocks.forEach((block) => {
-          // Apply syntax highlighting
-          hljs.default.highlightElement(block as HTMLElement);
+          // Type assertion for HTMLElement
+          const codeElement = block as HTMLElement;
+          hljs.default.highlightElement(codeElement);
           
-          // Get the parent pre element
-          const preElement = block.parentElement;
+          const preElement = codeElement.parentElement;
           if (!preElement) return;
           
-          // Add language label if detected
-          const language = block.className.match(/language-(\w+)/)?.[1];
+          // Add language class
+          const language = Array.from(codeElement.classList)
+            .find(cls => cls.startsWith('language-'))
+            ?.replace('language-', '');
+            
           if (language) {
-            preElement.setAttribute('data-language', language);
+            preElement.dataset.language = language;
           }
+
+          // Check if copy button already exists
+          if (preElement.querySelector('.copy-code-wrapper')) return;
           
-          // Create and add copy button
-          const copyButton = document.createElement('div');
-          copyButton.className = 'code-block-header';
+          // Create button container
+          const copyButtonWrapper = document.createElement('div');
+          copyButtonWrapper.className = 'copy-code-wrapper';
           
-          // Create a container for the copy button React component
-          const copyButtonContainer = document.createElement('div');
-          copyButtonContainer.id = `copy-button-${Math.random().toString(36).substring(2, 11)}`;
-          copyButton.appendChild(copyButtonContainer);
+          // Create mount point with unique ID
+          const mountPoint = document.createElement('div');
+          mountPoint.className = 'copy-code-mount';
+          copyButtonWrapper.appendChild(mountPoint);
           
-          // Add the copy button to the pre element
-          preElement.appendChild(copyButton);
+          // Insert at beginning of pre element
+          preElement.insertBefore(copyButtonWrapper, preElement.firstChild);
           
-          // Render the React copy button component inside the container
-          const codeText = block.textContent || '';
-          
-          // We need to use ReactDOM to render the React component inside the dynamically created container
+          // Render React component
           import('react-dom/client').then(({ createRoot }) => {
-            const root = createRoot(copyButtonContainer);
+            const codeText = codeElement.textContent || '';
+            const root = createRoot(mountPoint);
             root.render(<CopyCodeButton code={codeText} />);
           });
         });
@@ -64,21 +65,8 @@ const BlogContent: React.FC<BlogContentProps> = ({ html }) => {
     
     highlightCodeBlocks();
     
-    // Clean up function
     return () => {
-      if (containerRef.current) {
-        // Clean up any React components that were mounted
-        containerRef.current.querySelectorAll('.code-block-header').forEach((header) => {
-          if (header.firstChild && header?.firstChild?.id) {
-            try {
-              // This is a simplistic cleanup - in a real app, you'd use proper unmounting
-              header.remove();
-            } catch (e) {
-              console.error('Error cleaning up code block header:', e);
-            }
-          }
-        });
-      }
+      // Cleanup handled automatically by React's unmount
     };
   }, [html]);
   

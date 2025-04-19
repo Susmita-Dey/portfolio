@@ -1,3 +1,4 @@
+import BlogContent from "@/components/BlogContent";
 import CommentSection from "@/components/CommentSection";
 import { fonts } from "@/lib/data";
 import { Blog, BlogParams } from "@/lib/types";
@@ -92,7 +93,7 @@ export default async function BlogPage({ params }: BlogParams) {
 
   return (
     // <section className="max-w-5xl xl:max-w-7xl xl:grid xl:grid-cols-[2fr_1fr] gap-12 mt-12 mb-24">
-    <section className="max-w-7xl mx-auto w-full flex flex-col justify-center items-center gap-12 mt-12 mb-24">
+    <section className="max-w-5xl xl:max-w-6xl mx-auto w-full flex flex-col justify-center items-center gap-12 mt-12 mb-24">
       <div>
         <div className="w-full flex flex-col justify-center items-center px-4 mx-auto">
           <h2 className="lg:text-4xl md:text-3xl text-2xl text-center text-pretty break-words font-bold mb-8">
@@ -180,9 +181,9 @@ export default async function BlogPage({ params }: BlogParams) {
         <div className="my-6">
           {blog.coverImage && (
             <Image
-              width="1920"
+              width="900"
               height="550"
-              className="w-full rounded-lg h-auto hover:scale-105 hover:transition-opacity"
+              className="w-full rounded-lg h-full hover:scale-10 hover:transition-opacity"
               src={blog.coverImage.url}
               alt={blog.title}
               priority
@@ -190,12 +191,13 @@ export default async function BlogPage({ params }: BlogParams) {
           )}
         </div>
         <article className="w-full xl:order-1 mx-auto prose prose-lg">
-          <div
+          {/* <div
             className="blog-post container mx-auto px-4"
             dangerouslySetInnerHTML={{
               __html: blog.content.html,
             }}
-          />
+          /> */}
+          <BlogContent html={blog.content.html} />
         </article>
       </div>
       <CommentSection slug={params.blogSlug} postId={blog.id} />

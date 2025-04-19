@@ -7,7 +7,7 @@
     --background: 0 0% 100%;
     --foreground: 224 71.4% 4.1%;
     --card: 0 0% 100%;
-    --line-color: #e5e7eb;
+    --line-color: #ebe5eb;
     --card-foreground: 224 71.4% 4.1%;
     --popover: 0 0% 100%;
     --popover-foreground: 224 71.4% 4.1%;
@@ -127,7 +127,8 @@
   }
 
   .blog-post pre {
-    background-color: #f3f4f6;
+    background-color: #1f2937; /* Dark background for code blocks */
+    color: #f9fafb; /* Light text color for code blocks */
     padding: 1rem;
     margin: 1rem 0;
     border-radius: 0.5rem;
@@ -135,13 +136,14 @@
   }
 
   .blog-post code {
-    background-color: #f3f4f6;
-    color: black;
+    background-color: #1f2937; /* Dark background for code blocks */
+    color: #f9fafb;
     padding: 0.25rem 0.5rem;
     border-radius: 0.25rem;
     font-family: "Courier New", Courier, monospace;
     white-space: pre-wrap; /* Ensures long code lines wrap */
     word-wrap: break-word;
+    font-size: medium; /* Adjust font size for inline code */
   }
 
   /* Responsive Design */
@@ -347,3 +349,40 @@
     }
   }
 } */
+
+/* For Hashnode content formatting */
+.blog-content-container img {
+  @apply rounded-lg shadow-md my-6 mx-auto;
+}
+
+.blog-content-container pre {
+  @apply bg-gray-800 text-gray-100 p-4 rounded-lg overflow-x-auto;
+}
+
+.blog-content-container ul {
+  @apply list-disc pl-5 space-y-2 my-4;
+}
+
+.blog-content-container ol {
+  @apply list-decimal pl-5 space-y-2 my-4;
+}
+
+.blog-content-container h2 {
+  @apply text-3xl font-bold mt-8 mb-4;
+}
+
+.blog-content-container h3 {
+  @apply text-2xl font-semibold mt-6 mb-3;
+}
+
+.blog-content-container p {
+  @apply my-4 leading-relaxed;
+}
+
+.blog-content-container a {
+  @apply text-blue-600 hover:underline;
+}
+
+.blog-content-container blockquote {
+  @apply border-l-4 border-blue-500 pl-4 italic text-gray-600 my-4;
+}

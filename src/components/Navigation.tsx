@@ -42,7 +42,7 @@ const Navigation = () => {
           <TransitionLink href="/contact" label="Contact" />
           <ModeToggle />
           <Link
-            href="https://drive.google.com/file/d/1iNvC2tndfx8yw8pS8G6XDrAVlbe7uCLZ/view?usp=sharing"
+            href="https://drive.google.com/file/d/1WkE1CeRVuoJMGDn8r5qQHtyZYtemdZfN/view?usp=drive_link"
             target="_blank"
           >
             <Button>View Resume</Button>

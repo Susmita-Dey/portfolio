@@ -86,7 +86,11 @@ export function MobileNav() {
               <TransitionLink href="/about" label="About" />
               <TransitionLink href="/work" label="Work" />
               <TransitionLink href="/services" label="Services" />
-              <TransitionLink href="/blogs" label="Blogs" />
+              {/* <TransitionLink href="/blogs" label="Blogs" /> */}
+              <TransitionLink
+                href="https://susmitadey.hashnode.dev/"
+                label="Blogs"
+              />
               {/* <TransitionLink href="/products" label="Freebies" /> */}
               <TransitionLink href="/contact" label="Contact" />
             </div>

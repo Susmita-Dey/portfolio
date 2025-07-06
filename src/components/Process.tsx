@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { CanvasRevealEffect } from "@/components/ui/canvas-reveal-effect";
 import { fonts } from "@/lib/data";
 
-export function Process() {
+const Process = () => {
   return (
     <section className="flex flex-col py-20 w-full justify-center items-center">
       <h2 className="font-bold md:text-5xl text-3xl">
@@ -61,7 +61,7 @@ export function Process() {
       </div>
     </section>
   );
-}
+};
 
 const Card = ({
   title,
@@ -154,3 +154,5 @@ export const Icon = ({ className, ...rest }: any) => {
     </svg>
   );
 };
+
+export default Process;

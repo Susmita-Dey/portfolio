@@ -30,4 +30,5 @@ module.exports = {
       },
     ],
   },
+  transpilePackages: ["three-globe"]
 };

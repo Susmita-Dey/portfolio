@@ -12,7 +12,38 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Susmita Dey",
   description: "Software Developer, Designer & Freelancer",
-  icons: "/favicon.ico",
+  keywords: [
+    "Susmita Dey",
+    "Software Developer",
+    "Web Developer",
+    "Designer",
+    "Freelancer",
+    "Portfolio",
+    "React",
+    "Next.js",
+  ],
+  openGraph: {
+    title: "Susmita Dey",
+    description: "Software Developer, Designer & Freelancer",
+    url: "https://susmitadey.vercel.app/",
+    siteName: "Susmita Dey Portfolio",
+    images: [
+      {
+        url: "https://yourdomain.com/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Susmita Dey Portfolio",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Susmita Dey",
+    description: "Software Developer, Designer & Freelancer",
+    images: ["https://yourdomain.com/og-image.jpg"],
+  },
 };
 
 export default function RootLayout({

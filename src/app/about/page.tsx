@@ -1,8 +1,6 @@
 import SkillsSection from "@/components/SkillsSection";
-// import { TracingBeamDemo } from "@/components/TrackingBeamDemo";
-import { ImagesSlider } from "@/components/ui/ImagesSlider";
 import { Separator } from "@/components/ui/separator";
-import { certificates, fonts, generalSkills } from "@/lib/data";
+import { fonts, generalSkills } from "@/lib/data";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -113,6 +111,17 @@ const AboutPage = () => {
       <Separator />
       <div className="flex flex-col space-y-6 justify-center items-center my-10">
         <h2 className="md:text-5xl text-3xl font-medium text-center mb-5 text-balance tracking-tight">
+          Fun <span className="text-primary">Facts</span>
+        </h2>
+        <ul className="list-disc text-lg">
+          <li>I love building interactive UIs and animations.</li>
+          <li>Coffee fuels my creativity.</li>
+          <li>I enjoy hiking and landscape photography.</li>
+          <li>Always learning something new in tech!</li>
+        </ul>
+      </div>
+      {/* <div className="flex flex-col space-y-6 justify-center items-center my-10">
+        <h2 className="md:text-5xl text-3xl font-medium text-center mb-5 text-balance tracking-tight">
           Gallery of <span className="text-primary">Achievements</span>
         </h2>
         <ImagesSlider
@@ -120,7 +129,7 @@ const AboutPage = () => {
           images={certificates}
           overlay="false"
         />
-      </div>
+      </div> */}
       {/* Story of Getting into tech */}
       {/* <TracingBeamDemo /> */}
     </section>

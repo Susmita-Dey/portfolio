@@ -1,7 +1,7 @@
 import BlogContent from "@/components/BlogContent";
 import CommentSection from "@/components/CommentSection";
 import { fonts } from "@/lib/data";
-import { Blog, BlogParams } from "@/lib/types";
+import { Blog } from "@/lib/types";
 import { query } from "@/utils/hashnode";
 import { Metadata } from "next";
 import Image from "next/image";
@@ -11,7 +11,9 @@ import { GiCalendar } from "react-icons/gi";
 
 export async function generateMetadata({
   params,
-}: BlogParams): Promise<Metadata> {
+}: {
+  params: { blogSlug: string };
+}): Promise<Metadata> {
   const {
     data: { publication },
   } = await query({
@@ -50,7 +52,11 @@ export async function generateMetadata({
   };
 }
 
-export default async function BlogPage({ params }: BlogParams) {
+export default async function BlogPage({
+  params,
+}: {
+  params: { blogSlug: string };
+}) {
   const {
     data: { publication },
   } = await query({

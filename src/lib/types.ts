@@ -17,7 +17,7 @@ export interface Testimonial {
 }
 
 export interface Person {
-  _id:string;
+  _id: string;
   client: string;
   designation: string;
   clientImg: string;
@@ -61,11 +61,11 @@ export interface Blog {
   views: number;
 }
 
-export interface BlogParams {
-  params: {
-    blogSlug: string;
-  };
-}
+// export interface BlogParams {
+//   params: {
+//     blogSlug: string;
+//   };
+// }
 
 export interface Comment {
   id: string;

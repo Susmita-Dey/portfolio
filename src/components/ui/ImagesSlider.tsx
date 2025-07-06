@@ -87,27 +87,25 @@ export const ImagesSlider = ({
     initial: {
       scale: 0,
       opacity: 0,
-      rotateX: 45 as number, // ensure it's a number
     },
     visible: {
       scale: 1,
-      rotateX: 0 as number,
       opacity: 1,
       transition: {
         duration: 0.5,
-        ease: [0.42, 0, 0.58, 1], // cubic-bezier for ease-in-out
+        ease: [0.42, 0, 0.58, 1],
       },
     },
     upExit: {
       opacity: 1,
-      y: -150, // use number, not string
+      y: -150,
       transition: {
         duration: 1,
       },
     },
     downExit: {
       opacity: 1,
-      y: 150, // use number, not string
+      y: 150,
       transition: {
         duration: 1,
       },

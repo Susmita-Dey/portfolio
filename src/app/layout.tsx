@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     siteName: "Susmita Dey Portfolio",
     images: [
       {
-        url: "https://yourdomain.com/og-image.jpg",
+        url: "/ui-designs.png",
         width: 1200,
         height: 630,
         alt: "Susmita Dey Portfolio",
@@ -42,7 +42,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Susmita Dey",
     description: "Software Developer, Designer & Freelancer",
-    images: ["https://yourdomain.com/og-image.jpg"],
+    images: ["/ui-designs.png"],
+    creator: "@its_Susmita_Dey",
   },
 };
 

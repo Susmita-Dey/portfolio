@@ -52,7 +52,7 @@
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",
     "three": "^0.152.2",
-    "three-globe": "^2.43.0",
+    "three-globe": "2.37.3",
     "zod": "^3.23.8"
   },
   "devDependencies": {

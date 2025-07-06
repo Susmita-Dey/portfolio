@@ -61,12 +61,6 @@ export interface Blog {
   views: number;
 }
 
-// export interface BlogParams {
-//   params: {
-//     blogSlug: string;
-//   };
-// }
-
 export interface Comment {
   id: string;
   content: {

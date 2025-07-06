@@ -13,12 +13,12 @@ export const ImagesSlider = ({
   direction = "up",
 }: {
   images: string[];
-  children: React.ReactNode;
+  children?: React.ReactNode;
   overlay?: React.ReactNode;
   overlayClassName?: string;
   className?: string;
   autoplay?: boolean;
-  direction?: "up" | "down";
+  direction?: "up" | "down" | "left" | "right";
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [loading, setLoading] = useState(false);

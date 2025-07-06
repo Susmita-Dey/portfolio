@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 // import codedamn from "/codedamn.svg";
 // import digitea from "/digitea.svg";
@@ -50,9 +51,12 @@ const LogoSlider = () => {
             style={{ width: `${100 / slides.length}%` }}
           >
             <div className="flex items-center justify-center w-full h-full py-4 px-6">
-              <img
+              <Image
                 src={slide.image}
                 alt={`Slide ${index + 1}`}
+                fill
+                unoptimized
+                style={{ objectFit: "contain" }}
                 className="h-full w-full"
               />
             </div>

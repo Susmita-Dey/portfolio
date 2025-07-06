@@ -1,13 +1,7 @@
-// "use client";
+"use client";
 import Image from "next/image";
 import React, { useState } from "react";
-import {
-  motion,
-  useTransform,
-  AnimatePresence,
-  useMotionValue,
-  useSpring,
-} from "framer-motion";
+import { motion, useTransform, useMotionValue, useSpring } from "framer-motion";
 import { Person } from "@/lib/types";
 
 export const AnimatedTooltip = ({ items }: { items: Person[] }) => {
@@ -71,9 +65,11 @@ export const AnimatedTooltip = ({ items }: { items: Person[] }) => {
             onMouseMove={handleMouseMove}
             height={100}
             width={100}
-            src={item?.clientImg}
+            src={item?.clientImg || "/person.png"}
             alt={item?.client}
-            className="object-cover !m-0 !p-0 object-top rounded-full h-14 w-14 border-2 group-hover:scale-105 group-hover:z-30 border-white  relative transition duration-500"
+            className="object-cover !m-0 !p-0 object-top rounded-full h-14 w-14 border-2 group-hover:scale-105 group-hover:z-30 border-white relative transition duration-500"
+            unoptimized
+            loading="lazy"
           />
         </div>
       ))}

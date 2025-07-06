@@ -14,7 +14,7 @@ export const animatePageIn = () => {
       yPercent: 0,
     }).to([bannerOne, bannerTwo, bannerThree, bannerFour], {
       yPercent: 100,
-      stagger: 0.2,
+      stagger: 0.1,
     });
   }
 };

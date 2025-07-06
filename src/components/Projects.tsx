@@ -52,7 +52,14 @@ export default async function Projects() {
                         transform: `translateX(-${5 * index + 2}px)`,
                       }}
                     >
-                      <img src={icon?.iconUrl} alt="icon5" className="p-2" />
+                      <Image
+                        src={icon?.iconUrl}
+                        alt="icon5"
+                        className="p-2"
+                        fill
+                        unoptimized
+                        style={{ objectFit: "contain" }}
+                      />
                     </div>
                   ))}
                 </div>

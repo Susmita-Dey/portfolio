@@ -1,7 +1,8 @@
+"use client";
 import { gridItems } from "@/lib/data";
 import { BentoGrid, BentoGridItem } from "./BentoGrid";
 
-const Grid = () => {
+export default function Grid() {
   return (
     <section>
       <BentoGrid className="w-full pt-20">
@@ -23,6 +24,6 @@ const Grid = () => {
       </BentoGrid>
     </section>
   );
-};
+}
 
-export default Grid;
+// export default Grid;

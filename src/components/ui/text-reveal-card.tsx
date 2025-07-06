@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef, useState, memo } from "react";
+import React, { useEffect, useRef, useState, memo, useMemo } from "react";
 import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 import { cn } from "@/lib/utils";
@@ -151,6 +151,9 @@ const Stars = () => {
   const randomMove = () => Math.random() * 4 - 2;
   const randomOpacity = () => Math.random();
   const random = () => Math.random();
+  const top = useMemo(() => `${Math.random() * 100}%`, []);
+  const left = useMemo(() => `${Math.random() * 100}%`, []);
+
   return (
     <div className="absolute inset-0">
       {[...Array(80)].map((_, i) => (
@@ -169,8 +172,8 @@ const Stars = () => {
           }}
           style={{
             position: "absolute",
-            top: `${random() * 100}%`,
-            left: `${random() * 100}%`,
+            top,
+            left,
             width: `2px`,
             height: `2px`,
             backgroundColor: "white",

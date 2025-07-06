@@ -10,6 +10,7 @@ import { MobileNav } from "@/components/MobileNav";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://susmitadey.vercel.app"),
   title: "Susmita Dey",
   description: "Software Developer, Designer & Freelancer",
   keywords: [

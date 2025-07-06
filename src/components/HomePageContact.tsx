@@ -13,7 +13,7 @@ import { IoCopyOutline } from "react-icons/io5";
 import animationData from "@/lib/confetti.json";
 import Lottie from "react-lottie";
 
-export function HomePageContact() {
+export default function HomePageContact() {
   const [copied, setCopied] = useState(false);
 
   const defaultOptions = {

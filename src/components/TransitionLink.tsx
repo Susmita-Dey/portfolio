@@ -1,6 +1,7 @@
 "use client";
 
 import { animatePageOut } from "@/utils/animations";
+import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 
 interface Props {
@@ -28,13 +29,14 @@ const TransitionLink = ({ href, label }: Props) => {
   };
 
   return (
-    <a
+    <Link
       className="text-lg font-mono dark:text-white text-neutral-900 hover:text-primary hover:dark:text-primary"
       href={href}
       onClick={handleClick}
+      prefetch={true}
     >
       {label}
-    </a>
+    </Link>
   );
 };
 

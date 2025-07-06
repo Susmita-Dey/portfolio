@@ -1,22 +1,22 @@
 "use client";
 
-import Grid from "@/components/bento/Grid";
-import { Button } from "@/components/ui/button";
+import dynamic from "next/dynamic";
 import { fonts } from "@/lib/data";
-import Image from "next/image";
-import Link from "next/link";
-import React from "react";
-import Tile from "@/components/ui/Tile";
-import { motion } from "framer-motion";
-import { WobbleCardDemo } from "@/components/WobbleCardDemo";
-import { BoxHeroSection } from "@/components/BoxHeroSection";
+
+const WobbleCardDemo = dynamic(
+  () => import("@/components/WobbleCardDemo").then((mod) => mod.WobbleCardDemo),
+  { ssr: false, loading: () => <div style={{ height: 350 }} /> }
+);
+const Grid = dynamic(
+  () => import("@/components/bento/Grid").then((mod) => mod.default),
+  { ssr: false, loading: () => <div style={{ height: 350 }} /> }
+);
 
 const ServicesPage = () => {
   return (
     <section className="flex flex-col justify-center items-center my-20">
-      {/* Hero section */}
-      <BoxHeroSection />
-      <div className="flex flex-col justify-center items-center my-10">
+      {/* <BoxHeroSection /> */}
+      <div className="flex flex-col justify-center items-center mb-10">
         <h2 className=" text-center font-bold md:text-5xl text-3xl mb-10">
           Assisting You With{" "}
           <span className={`text-primary ${fonts.robotoSlab.className}`}>

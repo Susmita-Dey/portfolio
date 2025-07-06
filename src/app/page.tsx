@@ -4,7 +4,7 @@ import LogoSlider from "@/components/LogoSlider";
 import ProjectsSection from "@/components/ProjectsSection";
 import SkillsSection from "@/components/SkillsSection";
 import TestimonialSection from "@/components/TestimonialSection";
-import { HomePageContact } from "@/components/HomePageContact";
+import HomePageContact from "@/components/HomePageContact";
 import { skillsStack } from "@/lib/data";
 import Process from "@/components/Process";
 

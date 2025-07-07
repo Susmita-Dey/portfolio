@@ -54,9 +54,9 @@ const LogoSlider = () => {
               <Image
                 src={slide.image}
                 alt={`Slide ${index + 1}`}
-                fill
+                width={200}
+                height={100}
                 unoptimized
-                style={{ objectFit: "contain" }}
                 className="h-full w-full"
               />
             </div>

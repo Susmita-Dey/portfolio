@@ -17,7 +17,7 @@ const AboutPage = () => {
         <div className="flex flex-col space-y-4 justify-center items-center">
           <div className="border-4 rounded-xl w-80">
             <Image
-              src="/pic-purple-bg.jpg"
+              src="/jacket-photo.jpeg"
               className="h-full w-full object-cover rounded-lg"
               alt="profile-photo"
               width={500}

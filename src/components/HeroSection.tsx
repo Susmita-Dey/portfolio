@@ -16,9 +16,9 @@ const HeroSection = () => {
       <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill="blue" />
       <div className="mb-6 mt-2 md:my-6 flex flex-col sm:flex-row justify-between gap-6 px-4 sm:px-12 py-4">
         {/* image */}
-        <div className="border-4 rounded-md w-full sm:w-80 order-2 sm:order-1 mt-4 sm:mt-0">
+        <div className="border-4 rounded-md w-full sm:w-96 order-2 sm:order-1 mt-4 sm:mt-0">
           <Image
-            src="/pic-purple-bg.jpg"
+            src="/white-jacket.jpeg"
             className="h-full w-full object-cover"
             alt="profile-photo"
             width={500}
@@ -35,7 +35,7 @@ const HeroSection = () => {
           <p
             className={`text-xl sm:max-w-auto max-w-auto sm:text-wrap text-balance ${fonts.robotoSlab.className}`}
           >
-            A software developer and designer passionate about building web
+            A software developer and designer passionate about building web & mobile
             apps,
             <br /> Open Source and communities; based in <strong>India!</strong>
           </p>

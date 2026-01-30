@@ -60,7 +60,7 @@ export default function ExperienceSection() {
               variants={animationVariants}
               transition={{ duration: 1, delay: index * 1 }}
             >
-              <div className="flex flex-row justify-between">
+              <div className="flex flex-row justify-between w-full">
                 <div>
                   <h3 className="font-semibold capitalize">{item.title}</h3>
                   <p className="font-normal !mt-0">{item.location}</p>

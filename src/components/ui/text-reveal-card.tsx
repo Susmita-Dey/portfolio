@@ -148,11 +148,19 @@ export const TextRevealCardDescription = ({
 };
 
 const Stars = () => {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   const randomMove = () => Math.random() * 4 - 2;
   const randomOpacity = () => Math.random();
   const random = () => Math.random();
   const top = useMemo(() => `${Math.random() * 100}%`, []);
   const left = useMemo(() => `${Math.random() * 100}%`, []);
+
+  if (!mounted) return null;
 
   return (
     <div className="absolute inset-0">

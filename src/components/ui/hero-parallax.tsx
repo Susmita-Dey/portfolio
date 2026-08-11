@@ -98,17 +98,17 @@ export const HeroParallax = ({ projects }: { projects: ProjectsCard[] }) => {
 export const Header = () => {
   return (
     <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0">
-      <h1 className="text-2xl md:text-7xl font-bold dark:text-white">
-        My Ultimate <br /> development studio
+      <h1 className="text-3xl md:text-7xl font-black text-black dark:text-white tracking-tighter">
+        Crafting World-Class <br /> Digital Experiences
       </h1>
-      <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
-        I can built beautiful projects with the latest technologies and
-        frameworks. People call me a passionate developer and designer that love
-        to build amazing projects.
+      <p className="max-w-2xl text-base md:text-xl mt-8 text-neutral-600 dark:text-neutral-200 leading-relaxed font-light">
+        I build scalable, high-performance applications that drive global conversions. 
+        Explore a curated gallery of products I've engineered from the ground up, blending 
+        cutting-edge technology with award-winning design.
       </p>
       <Link href="/work">
-        <Button size="lg" className="text-base font-bold my-4">
-          View More Projects
+        <Button size="lg" className="text-base font-bold mt-8 shadow-xl">
+          View All Case Studies
         </Button>
       </Link>
     </div>
@@ -136,7 +136,7 @@ export const ProjectCard = ({
       <Link
         href={project.link}
         className="block group-hover/project:shadow-2xl"
-        target="_blank"
+        target="_blank" rel="noopener noreferrer"
       >
         <Image
           src={project.thumbnailUrl}

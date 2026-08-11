@@ -12,17 +12,20 @@ export function MobileNav() {
   const [scrolling, setScrolling] = React.useState(false);
 
   React.useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+    let ticking = false;
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setScrolling(window.scrollY > 20);
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  const handleScroll = () => {
-    if (window.scrollY > 20) {
-      setScrolling(true);
-    } else {
-      setScrolling(false);
-    }
-  };
 
   return (
     <nav
@@ -105,7 +108,7 @@ export function MobileNav() {
           <ModeToggle />
           <Link
             href="https://drive.google.com/file/d/1YrD_ykD38trfqwm8La2F_x-0Rw_m-P4g/view?usp=sharing"
-            target="_blank"
+            target="_blank" rel="noopener noreferrer"
           >
             <Button size="default">View Resume</Button>
           </Link>

@@ -57,7 +57,7 @@ export default function RootLayout({
     <>
       <html lang="en" suppressHydrationWarning>
         <head />
-        <body className={`mx-6 ${inter.className}`}>
+        <body className={inter.className}>
           <ThemeProvider
             attribute="class"
             defaultTheme="system"

@@ -16,35 +16,35 @@ const Footer = () => {
       <div className="flex flex-row gap-2 justify-center items-center">
         <Link
           href="mailto:susmitadeybusiness@gmail.com"
-          target="_blank"
+          target="_blank" rel="noopener noreferrer"
           className="items-start"
         >
           <MdEmail className="text-2xl" />
         </Link>
         <Link
           href="https://linkedin.com/in/susmitacodes"
-          target="_blank"
+          target="_blank" rel="noopener noreferrer"
           className="items-start"
         >
           <IoLogoLinkedin className="text-xl" />
         </Link>
         <Link
           href="https://github.com/Susmita-Dey/"
-          target="_blank"
+          target="_blank" rel="noopener noreferrer"
           className="items-start"
         >
           <IoLogoGithub className="text-xl" />
         </Link>
         <Link
           href="https://www.instagram.com/susmitadeyofficial"
-          target="_blank"
+          target="_blank" rel="noopener noreferrer"
           className="items-start"
         >
           <IoLogoInstagram className="text-xl" />
         </Link>
         <Link
           href="https://x.com/its_SusmitaDey"
-          target="_blank"
+          target="_blank" rel="noopener noreferrer"
           className="items-start"
         >
           <IoLogoTwitter className="text-xl" />

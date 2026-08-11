@@ -69,7 +69,7 @@ export default async function CommentSection({
                   <a
                     className="font-semibold"
                     href={`https://hashnode.com/@${comment.author.username}`}
-                    target="_blank"
+                    target="_blank" rel="noopener noreferrer"
                   >
                     {comment.author.name}
                   </a>
@@ -85,8 +85,8 @@ export default async function CommentSection({
                 <p className="font-normal text-base">{comment.content.text}</p>
                 <a
                   href={`https://hashnode.com/discussions/post/${postId}`}
-                  target="_blank"
-                  rel="noopener"
+                  target="_blank" rel="noopener noreferrer"
+                  
                 >
                   <Button variant="ghost" size="default">
                     <VscCommentDiscussion className="w-4 h-4 mr-1" />
@@ -108,8 +108,8 @@ export default async function CommentSection({
             <p className="text-lg italic font-normal">No comments made yet!</p>
             <a
               href={`https://hashnode.com/discussions/post/${postId}`}
-              target="_blank"
-              rel="noopener"
+              target="_blank" rel="noopener noreferrer"
+              
             >
               <Button variant="default" size="lg">
                 <VscCommentDiscussion className="w-4 h-4 mr-1" />

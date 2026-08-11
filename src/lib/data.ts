@@ -55,17 +55,17 @@ export const experiencesData = [
     icon: React.createElement(MdWork),
     date: "Sep 2025 - Jan 2026",
   },
-  {
-    title: "Full-Stack Developer",
-    type: "Freelance",
-    company: "EducateUsGPT",
-    companyPage: "https://educateusgpt.vercel.app/",
-    location: "Remote, USA",
-    description:
-    "Developed EduacateUsGPT web application - a doc-based tutorial website for Data Mining and Analytics learning.",
-    icon: React.createElement(GiTakeMyMoney),
-    date: "March 2024 - Apr 2024",
-  },
+  // {
+  //   title: "Full-Stack Developer",
+  //   type: "Freelance",
+  //   company: "EducateUsGPT",
+  //   companyPage: "https://educateusgpt.vercel.app/",
+  //   location: "Remote, USA",
+  //   description:
+  //   "Developed EduacateUsGPT web application - a doc-based tutorial website for Data Mining and Analytics learning.",
+  //   icon: React.createElement(GiTakeMyMoney),
+  //   date: "March 2024 - Apr 2024",
+  // },
   {
     title: "Graphic Designer",
     type: "Freelance",

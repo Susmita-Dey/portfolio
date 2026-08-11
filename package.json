@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -33,6 +33,7 @@
     "embla-carousel-react": "^8.0.4",
     "gsap": "^3.12.5",
     "highlight.js": "^11.11.1",
+    "isomorphic-dompurify": "^3.22.0",
     "mini-svg-data-uri": "^1.4.4",
     "next": "^15.3.5",
     "next-sanity": "^9.4.2",

@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, memo } from "react";
 import { Color, Scene, Fog, PerspectiveCamera, Vector3 } from "three";
 import ThreeGlobe from "three-globe";
 import { useThree, Canvas, extend } from "@react-three/fiber";
@@ -63,7 +63,7 @@ interface WorldProps {
 
 let numbersOfRings = [0];
 
-export function Globe({ globeConfig, data }: WorldProps) {
+export const Globe = memo(function Globe({ globeConfig, data }: WorldProps) {
   const globeRef = useRef<ThreeGlobe | null>(null);
   const groupRef = useRef();
   const [isInitialized, setIsInitialized] = useState(false);
@@ -233,7 +233,7 @@ export function Globe({ globeConfig, data }: WorldProps) {
   }, [isInitialized, data]);
 
   return <group ref={groupRef} />;
-}
+});
 
 export function WebGLRendererConfig() {
   const { gl, size } = useThree();
@@ -247,7 +247,7 @@ export function WebGLRendererConfig() {
   return null;
 }
 
-export function World(props: WorldProps) {
+export const World = memo(function World(props: WorldProps) {
   const { globeConfig } = props;
   const scene = new Scene();
   scene.fog = new Fog(0xffffff, 400, 2000);
@@ -281,7 +281,7 @@ export function World(props: WorldProps) {
       />
     </Canvas>
   );
-}
+});
 
 export function hexToRgb(hex: string) {
   var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;

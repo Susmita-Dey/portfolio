@@ -67,7 +67,7 @@ export const TextRevealCard = ({
       onTouchMove={touchMoveHandler}
       ref={cardRef}
       className={cn(
-        "bg-[#010119] border border-white/[0.08] md:w-[40rem] rounded-lg p-8 relative overflow-hidden",
+        "bg-white dark:bg-[#010119] border border-black/10 dark:border-white/[0.08] md:w-[40rem] rounded-lg p-8 relative overflow-hidden",
         className
       )}
     >
@@ -89,13 +89,13 @@ export const TextRevealCard = ({
                 }
           }
           transition={isMouseOver ? { duration: 0 } : { duration: 0.4 }}
-          className="absolute bg-[#010119] z-20 will-change-transform"
+          className="absolute bg-white dark:bg-[#010119] z-20 will-change-transform"
         >
           <p
             style={{
               textShadow: "4px 4px 15px rgba(0,0,0,0.5)",
             }}
-            className="text-base sm:text-[3rem] py-10 font-bold text-white bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-300"
+            className="text-base sm:text-[3rem] py-10 font-bold text-black dark:text-white bg-clip-text text-transparent bg-gradient-to-b from-black to-neutral-400 dark:from-white dark:to-neutral-300"
           >
             {revealText}
           </p>
@@ -111,7 +111,7 @@ export const TextRevealCard = ({
         ></motion.div>
 
         <div className=" overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,white,transparent)]">
-          <p className="text-base sm:text-[3rem] py-10 font-bold bg-clip-text text-transparent bg-[#323238]">
+          <p className="text-base sm:text-[3rem] py-10 font-bold bg-clip-text text-transparent bg-neutral-300 dark:bg-[#323238]">
             {text}
           </p>
           <MemoizedStars />
@@ -129,7 +129,7 @@ export const TextRevealCardTitle = ({
   className?: string;
 }) => {
   return (
-    <h2 className={twMerge("text-white text-lg mb-2", className)}>
+    <h2 className={twMerge("text-black dark:text-white text-lg mb-2", className)} tabIndex={0}>
       {children}
     </h2>
   );
@@ -143,7 +143,7 @@ export const TextRevealCardDescription = ({
   className?: string;
 }) => {
   return (
-    <p className={twMerge("text-[#a9a9a9] text-sm", className)}>{children}</p>
+    <p className={twMerge("text-neutral-500 dark:text-[#a9a9a9] text-sm", className)} tabIndex={0}>{children}</p>
   );
 };
 
@@ -163,7 +163,7 @@ const Stars = () => {
   if (!mounted) return null;
 
   return (
-    <div className="absolute inset-0">
+    <div className="absolute inset-0" aria-hidden="true">
       {[...Array(80)].map((_, i) => (
         <motion.span
           key={`star-${i}`}

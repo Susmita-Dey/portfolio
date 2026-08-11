@@ -12,6 +12,7 @@ export async function query({ query, variables, tags }: Query) {
     }),
     next: {
       tags,
+      revalidate: 3600, // Revalidate every hour
     },
   }).then((r) => r.json());
 

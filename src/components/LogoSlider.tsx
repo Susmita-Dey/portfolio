@@ -21,7 +21,7 @@ const LogoSlider = () => {
   const duplicatedSlides = [...slides, ...slides];
 
   return (
-    <section className="relative w-full overflow-hidden py-24 bg-backgroundColorTertiary">
+    <section className="relative w-full overflow-hidden py-24 bg-transparent">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="flex flex-col items-center justify-center mb-16">
           <motion.span 
@@ -37,7 +37,7 @@ const LogoSlider = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-3xl md:text-5xl font-bold text-center text-white mb-6"
+            className="text-3xl md:text-5xl font-bold text-center text-black dark:text-white mb-6"
           >
             Companies I have worked with
           </motion.h2>

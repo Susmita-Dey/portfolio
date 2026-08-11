@@ -14,9 +14,9 @@ const Grid = dynamic(
 
 const ServicesPage = () => {
   return (
-    <section className="flex flex-col justify-center items-center my-20">
+    <section className="w-full max-w-7xl mx-auto px-4 md:px-8 flex flex-col justify-center items-center pt-32 pb-20">
       {/* <BoxHeroSection /> */}
-      <div className="flex flex-col justify-center items-center mb-10">
+      <div className="flex flex-col justify-center items-center mb-10 w-full">
         <h2 className=" text-center font-bold md:text-5xl text-3xl mb-10">
           Assisting You With{" "}
           <span className={`text-primary ${fonts.robotoSlab.className}`}>

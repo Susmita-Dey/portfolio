@@ -11,7 +11,9 @@ import { fonts, socialMedia } from "@/lib/data";
 import MagicButton from "./MagicButton";
 import { IoCopyOutline } from "react-icons/io5";
 import animationData from "@/lib/confetti.json";
-import Lottie from "react-lottie";
+import dynamic from "next/dynamic";
+const Lottie = dynamic(() => import("react-lottie"), { ssr: false });
+import { Button } from "./ui/button";
 
 export default function HomePageContact() {
   const [copied, setCopied] = useState(false);
@@ -60,45 +62,45 @@ export default function HomePageContact() {
             icon={<IoCopyOutline />}
             position="left"
             handleClick={handleCopy}
-            otherClasses="!bg-[#161A31]"
+            otherClasses="!bg-neutral-100 dark:!bg-[#161A31] !text-black dark:!text-white border border-black/10 dark:border-white/10"
           />
         </div>
         <div className="flex flex-col gap-2 border rounded-lg p-8 w-full">
           <p className="text-xl font-medium">Connect With Me On Socials</p>
-          <div className="flex flex-row justify-between items-center mt-2">
-            <div className="flex-col gap-2">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-4">
+            <div className="flex flex-col gap-2">
               {socialMedia.slice(0, 3).map((item, index) => (
                 <div className="flex space-x-2" key={index}>
                   <Link
                     className="px-1 cursor-pointer inline-flex items-center font-medium border-b border-dotted hover:border-black/0"
                     href={item.url}
-                    target="_blank"
+                    target="_blank" rel="noopener noreferrer"
                   >
                     {item.name}
                   </Link>
                 </div>
               ))}
             </div>
-            <div className="flex-col gap-2">
+            <div className="flex flex-col gap-2">
               {socialMedia.slice(3, 6).map((item, index) => (
                 <div className="flex space-x-2 gap-4" key={index}>
                   <Link
                     className="px-1 cursor-pointer inline-flex items-center font-medium border-b border-dotted hover:border-black/0"
                     href={item.url}
-                    target="_blank"
+                    target="_blank" rel="noopener noreferrer"
                   >
                     {item.name}
                   </Link>
                 </div>
               ))}
             </div>
-            <div className="flex-col gap-2">
+            <div className="flex flex-col gap-2">
               {socialMedia.slice(6, 9).map((item, index) => (
                 <div className="flex space-x-2 gap-4" key={index}>
                   <Link
                     className="px-1 cursor-pointer inline-flex items-center font-medium border-b border-dotted hover:border-black/0"
                     href={item.url}
-                    target="_blank"
+                    target="_blank" rel="noopener noreferrer"
                   >
                     {item.name}
                   </Link>
@@ -120,9 +122,19 @@ export default function HomePageContact() {
           next project!
         </TextRevealCardDescription>
       </TextRevealCard>
-      <Link href={"/contact"}>
-        <MovingBorderDemo />
-      </Link>
+      <div className="flex flex-col sm:flex-row gap-4 mt-8 w-full sm:w-auto px-4 sm:px-0 justify-center">
+        <Link href={"/contact"} className="w-full sm:w-auto flex justify-center">
+          <MovingBorderDemo />
+        </Link>
+        <Link href={"https://cal.com/susmitadey"} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto flex justify-center">
+          <Button
+            size="lg"
+            className="w-full sm:w-auto px-8 py-7 text-lg bg-primary hover:bg-primary/90 text-white rounded-full font-semibold transition-all duration-300 hover:scale-105"
+          >
+            Book a 15-min Discovery Call
+          </Button>
+        </Link>
+      </div>
     </section>
   );
 }

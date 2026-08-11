@@ -1,7 +1,7 @@
 "use client";
 
 import { CopyIcon } from '@radix-ui/react-icons';
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { FaCopy, FaCheck } from 'react-icons/fa';
 
 interface CopyCodeButtonProps {
@@ -11,11 +11,22 @@ interface CopyCodeButtonProps {
 const CopyCodeButton = ({ code }: CopyCodeButtonProps) => {
   const [copied, setCopied] = useState(false);
 
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  useEffect(() => {
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, []);
+
   const handleCopy = async () => {
     try {
       await navigator.clipboard.writeText(code);
       setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+      timeoutRef.current = setTimeout(() => setCopied(false), 2000);
     } catch (err) {
       console.error('Failed to copy:', err);
     }

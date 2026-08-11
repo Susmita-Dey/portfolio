@@ -131,8 +131,8 @@ export default async function BlogPage({
                     <a
                       className="hover:underline hover:text-blue-500"
                       href={blog.author.socialMediaLinks.twitter}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      target="_blank" rel="noopener noreferrer"
+                      
                     >
                       Twitter
                     </a>
@@ -143,8 +143,8 @@ export default async function BlogPage({
                     <a
                       className="hover:underline hover:text-blue-500"
                       href={blog.author.socialMediaLinks.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      target="_blank" rel="noopener noreferrer"
+                      
                     >
                       LinkedIn
                     </a>

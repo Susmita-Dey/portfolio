@@ -1,16 +1,18 @@
 import ExperienceSection from "@/components/ExperienceSection";
 import HeroSection from "@/components/HeroSection";
 import LogoSlider from "@/components/LogoSlider";
-import ProjectsSection from "@/components/ProjectsSection";
 import SkillsSection from "@/components/SkillsSection";
-import TestimonialSection from "@/components/TestimonialSection";
-import HomePageContact from "@/components/HomePageContact";
 import { skillsStack } from "@/lib/data";
-import Process from "@/components/Process";
+import dynamic from "next/dynamic";
+
+const ProjectsSection = dynamic(() => import("@/components/ProjectsSection"));
+const TestimonialSection = dynamic(() => import("@/components/TestimonialSection"));
+const Process = dynamic(() => import("@/components/Process"));
+const HomePageContact = dynamic(() => import("@/components/HomePageContact"));
 
 const HomePage = () => {
   return (
-    <main className="mx-6 my-10 space-y-4 flex flex-col items-center min-h-screen">
+    <main className="w-full max-w-7xl mx-auto px-4 md:px-8 pt-28 md:pt-36 pb-10 space-y-4 flex flex-col items-center min-h-screen">
       <HeroSection />
       <LogoSlider />
       <SkillsSection data={skillsStack} />
